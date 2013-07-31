@@ -34,6 +34,7 @@ alias ip="ifconfig |grep inet"
 alias ggg="git add --all . ;git commit -m $1"
 alias ch="git checkout"
 alias nb="git push -u origin"
+alias nr="sh ~/Dropbox/Saves/dotfiles/new_repo.sh $1" 
 alias prune="sh ~/Dropbox/Saves/dotfiles/prune_branches.sh $1"
 alias gq="git commit -m $1"
 
