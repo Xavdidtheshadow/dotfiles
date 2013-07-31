@@ -1,0 +1,55 @@
+[user]
+	name = David Brownman
+	email = beamneocube@gmail.com
+[core]
+	editor = nano
+[merge]
+	tool = vimdiff
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	interactive = auto
+	ui = true
+	pager = true
+
+[color "branch"]
+	current = white
+	local = white
+	remote = green
+
+[color "diff"]
+	meta = magenta reverse
+	frag = magenta
+	old = red
+	new = green
+
+[alias]
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
+
+	# Aliases
+	unadd = reset HEAD
+	tree = log --graph --oneline --decorate
+	purr = pull --rebase
+	all = commit -A
+	standup = log ––since yesterday ––author David
+
+	# Shorthands
+	l = log --graph --oneline --decorate  # alias of tree above
+	st = status -s
+	d = diff
+	br = branch
+	bra = branch -a
+
+
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
