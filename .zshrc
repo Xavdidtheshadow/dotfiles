@@ -12,6 +12,7 @@ ZSH_THEME="kolo"
 
 ##~ EDITORS ~##
 alias zshconfig="subl ~/.zshrc"
+alias gitconfig="subl ~/.gitconfig"
 alias mate="subl"
 
 ##~ OSX ~##
@@ -26,6 +27,7 @@ alias db="~/Documents/Docs/Dropbox"
 alias caen="ssh brownman@login.engin.umich.edu"
 alias c="clear"
 alias sz="source ~/.zshrc"
+
 
 ##~ GIT ~##
 alias g="git"
