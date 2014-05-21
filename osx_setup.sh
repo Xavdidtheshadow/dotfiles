@@ -1,11 +1,21 @@
 # RUN THIS FROM THE DOTFILE FOLDER
 
-# brew = false
+brew=false
+zsh=false
+apps=false
 
 
-# if [[ $* == *--brew* ]]; then
-#     $brew = true
-# fi
+if [[ $* == *--brew* ]]; then
+    brew=true
+fi
+
+if [[ $* == *--zsh* ]]; then
+    zsh=true
+fi
+
+if [[ $* == *--apps* ]]; then
+    apps=true
+fi
 
 #zsh setup
 dotpath=`pwd`

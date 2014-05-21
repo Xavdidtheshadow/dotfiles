@@ -50,6 +50,8 @@
 	<false/>
 	<key>HideActivityIndicator</key>
 	<false/>
+	<key>HideMenuBarInFullscreen</key>
+	<true/>
 	<key>HideScrollbar</key>
 	<false/>
 	<key>HideTab</key>
@@ -117,11 +119,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>204 240 924 485 0 0 1440 878 </string>
+	<string>491 238 924 485 0 0 1440 878 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>438 250 384 129 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>70 33 836 845 0 0 1440 878 </string>
+	<string>68 449 1144 386 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>177 171 850 676 0 0 1440 878 </string>
+	<string>773 466 570 338 0 0 1440 878 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>204 45 570 338 0 0 1440 878 </string>
 	<key>NeverWarnAboutShortLivedSessions_DD4C248D-5042-4E43-8D8D-BB406CEB6EB8</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -680,11 +686,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>Menlo-Regular 11</string>
+			<string>Inconsolata 13</string>
 			<key>Non-ASCII Anti Aliased</key>
-			<true/>
+			<false/>
 			<key>Normal Font</key>
-			<string>Menlo-Regular 11</string>
+			<string>Inconsolata 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1594,8 +1600,10 @@
 			<string>/Users/David</string>
 		</dict>
 	</array>
-	<key>OnlyWhenMoreTabs</key>
+	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
+	<key>OnlyWhenMoreTabs</key>
+	<false/>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenBookmark</key>
@@ -1658,7 +1666,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-07-30T15:52:20Z</date>
+	<date>2014-05-20T04:47:05Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1694,7 +1702,7 @@
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
-	<string>Lucida Grande</string>
+	<string>.Lucida Grande UI</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
@@ -1706,6 +1714,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20130624</string>
+	<string>1.0.0.20140421</string>
 </dict>
 </plist>

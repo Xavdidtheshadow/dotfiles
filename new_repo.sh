@@ -2,6 +2,11 @@
 
 # If you're having an issue with authentication, use git config --global user.username "GIT_USERNAME" 
 
+git init
+
+git add .
+git commit -m "initial commit in new repo"
+
 REPONAME=${PWD##*/}
 
 if [[ $1 == *-n* ]] || [[ $1 == *--name* ]]
@@ -14,5 +19,5 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     curl -u $(git config user.username) https://api.github.com/user/repos -d "{\"name\":\"${REPONAME}\"}"
     git remote add origin git@github.com:$(git config user.username)/${REPONAME}.git
-    git push origin master
+    git push --set-upstream origin master
 fi

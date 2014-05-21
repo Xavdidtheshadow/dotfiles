@@ -3,7 +3,7 @@
 	email = beamneocube@gmail.com
 	username = Xavdidtheshadow
 [core]
-	editor = nano
+	editor = subl -n -w
 [merge]
 	tool = vimdiff
 [color]
@@ -49,8 +49,15 @@
 	br = branch
 	bra = branch -a
 
+	# typos
+	psuh = push
+	
+
 
 [credential]
 	helper = osxkeychain
 [push]
 	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
