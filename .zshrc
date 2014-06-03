@@ -101,3 +101,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/share/npm/lib/node_modules/coffee-script/bin:/Users/dbrownman/.rvm/gems/ruby-1.9.3-p429/bin:/Users/dbrownman/.rvm/gems/ruby-1.9.3-p429@global/bin:/Users/dbrownman/.rvm/rubies/ruby-1.9.3-p429/bin:/Users/dbrownman/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/dbrownman/.rvm/bin:~/pebble-dev/arm-cs-tools/bin
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
