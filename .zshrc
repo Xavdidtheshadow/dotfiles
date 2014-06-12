@@ -5,8 +5,6 @@ source ~/.env
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 ZSH_THEME="kolo"
 
 ##~ PATH STUFF ~## 
@@ -35,10 +33,14 @@ alias http="python -m SimpleHTTPServer 8080"
 alias watch="sass --watch ."
 alias ms="middleman server"
 alias xtime="wget http://c.xkcd.com/redirect/comic/now; open ./now; read; rm ./now;"
+
+## ~ SINATRA ~~##
 alias sin='rerun ruby "${PWD##*/}.rb"'
+alias cig='lsof -i :4567'
 
 ##~ GIT ~##
 alias g="git"
+alias purr="git pull --rebase"
 alias gs="git status"
 alias ip="ifconfig |grep inet"
 alias ggg="git add --all . ;git commit -m $1"
@@ -103,3 +105,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/local/share/npm/lib/node_modules/coffee-script/bin:/Users/dbrownman/.rvm/gems/ruby-1.9.3-p429/bin:/Users/dbrownman/.rvm/gems/ruby-1.9.3-p429@global/bin:/Users/dbrownman/.rvm/rubies/ruby-1.9.3-p429/bin:/Users/dbrownman/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/dbrownman/.rvm/bin:~/pebble-dev/arm-cs-tools/bin
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
