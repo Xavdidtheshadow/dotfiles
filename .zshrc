@@ -23,13 +23,12 @@ alias zhide="defaults write com.apple.finder AppleShowAllFiles FALSE; killall Fi
 alias zshow="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder"
 
 ##~ RIQ WORK ~##
-alias p="cd ~/projects"
 
 ##~ TERMINAL ~##
 alias caen="ssh brownman@login.engin.umich.edu"
 alias c="clear"
 alias sz="source ~/.zshrc"
-alias http="python -m SimpleHTTPServer 8080"
+alias http="python -m SimpleHTTPServer 1234"
 alias watch="sass --watch ."
 alias ms="middleman server"
 alias xtime="wget http://c.xkcd.com/redirect/comic/now; open ./now; read; rm ./now;"
@@ -48,10 +47,13 @@ alias ggu="git add -u .;git commit -m $1"
 alias ch="git checkout"
 # nb instructions: `nb $BRANCH`
 alias nb="git push -u origin"
+# stolen from Nick Quinlan
+alias pushit="open -g spotify:track:0GugYsbXWlfLOgsmtsdxzg; git push"
 
 alias gq="git commit -m"
 alias disc="git reset --hard"
 alias shc="sh compile.sh"
+alias b="sh build.sh"
 
 ##~ HEROKU ~##
 alias gphm="git push heroku master"
@@ -62,7 +64,7 @@ alias rc="rails console"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
+
 # I don't actually know what these do
 plugins=(git rails ruby subl)
 
@@ -70,10 +72,11 @@ plugins=(git rails ruby subl)
 function work() 
 {   
     alias gi="cd ~/projects"
-    export JAVA_HOME="$(/usr/libexec/java_home)"
-    export PROJECTS_ROOT=$HOME/projects
-    export RIQ=$PROJECTS_ROOT/riq
-    . $RIQ/scripts/dev_bash_profile.sh
+    # pulled out because I removed the riq repo
+    # export JAVA_HOME="$(/usr/libexec/java_home)"
+    # export PROJECTS_ROOT=$HOME/projects
+    # export RIQ=$PROJECTS_ROOT/riq
+    # . $RIQ/scripts/dev_bash_profile.sh
     export DEVENV=$PROJECTS_ROOT/devenv 
     export PATH=$PATH:$DEVENV/bin
 }

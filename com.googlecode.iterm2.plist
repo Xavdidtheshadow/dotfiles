@@ -83,7 +83,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Desktop</string>
+	<string>~/Dropbox (Personal)/Saves/dotfiles</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -101,33 +101,20 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>198</string>
+		<string>302</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
-	<key>NSToolbar Configuration Terminal Toolbar</key>
-	<dict>
-		<key>TB Display Mode</key>
-		<integer>1</integer>
-		<key>TB Icon Size Mode</key>
-		<integer>1</integer>
-		<key>TB Is Shown</key>
-		<integer>0</integer>
-		<key>TB Size Mode</key>
-		<integer>1</integer>
-	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>491 238 924 485 0 0 1440 878 </string>
+	<string>2293 364 924 485 1440 103 2560 1418 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>438 250 384 129 0 0 1440 878 </string>
+	<string>3282 623 384 129 1440 103 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>68 449 1144 386 0 0 1440 878 </string>
+	<string>1591 372 1277 686 1440 103 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>773 466 570 338 0 0 1440 878 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>204 45 570 338 0 0 1440 878 </string>
+	<string>183 68 570 386 0 0 1440 878 </string>
 	<key>NeverWarnAboutShortLivedSessions_DD4C248D-5042-4E43-8D8D-BB406CEB6EB8</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -702,7 +689,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>10000</integer>
+			<integer>20000</integer>
 			<key>Scrollback With Status Bar</key>
 			<false/>
 			<key>Scrollback in Alternate Screen</key>
@@ -1648,7 +1635,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/David/Documents/Docs/Dropbox/Saves/dotfiles</string>
+	<string>/Users/davidbrownman/Dropbox (Personal)/Saves/dotfiles</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1666,7 +1653,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-05-20T04:47:05Z</date>
+	<date>2014-07-22T17:15:01Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1702,7 +1689,7 @@
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
-	<string>.Lucida Grande UI</string>
+	<string>Lucida Grande</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
@@ -1714,6 +1701,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20140421</string>
+	<string>1.0.0.20140518</string>
 </dict>
 </plist>
