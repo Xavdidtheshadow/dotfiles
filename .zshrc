@@ -2,6 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 source ~/.env
+source ~/.loc
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -34,14 +35,15 @@ alias ms="middleman server"
 alias xtime="wget http://c.xkcd.com/redirect/comic/now; open ./now; read; rm ./now;"
 
 ## ~ SINATRA ~~##
-alias sin='rerun ruby "${PWD##*/}.rb"'
+alias sin='rerun ruby "${PWD##*/}.rb" -p "**/*.{rb,js,coffee,css,scss,sass,erb,html,haml,ru,yml,slim,md,json}"'
 alias cig='lsof -i :4567'
 
 ##~ GIT ~##
 alias g="git"
 alias purr="git pull --rebase"
 alias gs="git status"
-alias ip="ifconfig |grep inet"
+alias mip="ifconfig |grep inet"
+alias ip="curl http://ipecho.net/plain ;echo"
 alias ggg="git add --all . ;git commit -m $1"
 alias ggu="git add -u .;git commit -m $1"
 alias ch="git checkout"
@@ -54,6 +56,9 @@ alias gq="git commit -m"
 alias disc="git reset --hard"
 alias shc="sh compile.sh"
 alias b="sh build.sh"
+
+# from http://www.reddit.com/2e513y
+function gi() { curl http://www.gitignore.io/api/$@ ;}
 
 ##~ HEROKU ~##
 alias gphm="git push heroku master"
@@ -71,12 +76,11 @@ plugins=(git rails ruby subl)
 ##~ RIQ ~##
 function work() 
 {   
-    alias gi="cd ~/projects"
     # pulled out because I removed the riq repo
-    # export JAVA_HOME="$(/usr/libexec/java_home)"
-    # export PROJECTS_ROOT=$HOME/projects
-    # export RIQ=$PROJECTS_ROOT/riq
-    # . $RIQ/scripts/dev_bash_profile.sh
+    export JAVA_HOME="$(/usr/libexec/java_home)"
+    export PROJECTS_ROOT=$HOME/projects
+    export RIQ=$PROJECTS_ROOT/riq
+    source $RIQ/scripts/dev_bash_profile.sh
     export DEVENV=$PROJECTS_ROOT/devenv 
     export PATH=$PATH:$DEVENV/bin
 }
@@ -84,7 +88,6 @@ function work()
 ##~ BLACK PEARL ~##
 function home()
 {
-    alias gi="cd ~/Documents/Docs/CompCreation/Git"
     alias db="cd ~/Documents/Docs/Dropbox"
     alias co="cd ~/Documents/Docs/Google\ Drive/College"
     alias webs="cd ~/Documents/Docs/CompCreation/Git/website"
