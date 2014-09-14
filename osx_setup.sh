@@ -34,6 +34,12 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 # install autojump
 brew install autojump
 
+# install bundler
+gem install bundler
+
+# better ruby version
+curl -sSL https://get.rvm.io | bash -s stable --ruby=2.1.1
+
 # symlinks
 ln -s $dotpath/.zshrc .
 ln -s $dotpath/.gitconfig .
