@@ -88,12 +88,13 @@ function work()
 ##~ BLACK PEARL ~##
 function home()
 {
-    alias db="cd ~/Documents/Docs/Dropbox"
-    alias co="cd ~/Documents/Docs/Google\ Drive/College"
-    alias webs="cd ~/Documents/Docs/CompCreation/Git/website"
+    export DROPBOX=$HOME/Dropbox
+    export DOTFILES=$DROPBOX/Saves/dotfiles
+    alias db="cd $DROPBOX"
+    # alias webs="cd ~/Documents/Docs/CompCreation/Git/website"
     ## CUSTOM GIT ##
-    alias nr="sh ~/Dropbox/Saves/dotfiles/new_repo.sh" 
-    alias prune="sh ~/Dropbox/Saves/dotfiles/prune_branches.sh $1"
+    alias nr="sh $DOTFILES/new_repo.sh" 
+    alias prune="sh $DOTFILES/prune_branches.sh $1"
 }
 
 

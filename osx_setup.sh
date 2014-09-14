@@ -19,21 +19,27 @@
 #     apps=true
 # fi
 
+# Ask for the administrator password upfront
+sudo -v
+
 # #zsh setup
-# dotpath=`pwd`
-# cd ~
+dotpath=`pwd`
+cd ~
 #insall oh_my_zsh
-# curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
 # install brew
-# ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
+# install autojump
+brew install autojump
 
 # symlinks
-# ln -sf $dotpath/.zshrc .
-# ln -sf $dotpath/.gitconfig .
-# ln -s $dotpath/.env .
-# ln -s $dotpath/.gemrc .
-
+ln -s $dotpath/.zshrc .
+ln -s $dotpath/.gitconfig .
+ln -s $dotpath/.env .
+ln -s $dotpath/.gemrc .
+ln -s $dotpath/.irbrc .
 # osx stuff
 
 # install subl - use root instead of ~
@@ -42,41 +48,40 @@
 # install inconsolata
 
 # sublime setup
-# cd Library/Application\ Support/Sublime\ Text\ 3
-# rm -rf Packages
-# rm -rf Insalled\ Packages
-# ln -s $dotpath/Packages .
-# ln -s $dotpath/Installed\ Packages .
-# cd ~
+cd ~/Library/Application\ Support/Sublime\ Text\ 3
+rm -rf Packages
+rm -rf Insalled\ Packages
+ln -s $dotpath/ST3/Packages .
+ln -s $dotpath/ST3/Installed\ Packages .
+cd ~
 
 # OSX Preferences
 
-# Ask for the administrator password upfront
-# sudo -v
+
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
-# while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Disable the sound effects on boot
-# sudo nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume=" "
 
 # Expand save panel by default
-# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 # Expand print panel by default
-# defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-# defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
 # Save to disk (not to iCloud) by default
-# defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Automatically quit printer app once the print jobs complete
-# defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 # Disable the “Are you sure you want to open this application?” dialog
 # I AIN'T A COWARD
-# defaults write com.apple.LaunchServices LSQuarantine -bool false
+defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # start
 
