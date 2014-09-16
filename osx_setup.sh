@@ -46,6 +46,7 @@ ln -s $dotpath/.gitconfig .
 ln -s $dotpath/.env .
 ln -s $dotpath/.gemrc .
 ln -s $dotpath/.irbrc .
+ln -s $dotpath/.vimrc .
 # osx stuff
 
 # install subl - use root instead of ~
