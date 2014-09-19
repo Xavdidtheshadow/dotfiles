@@ -19,8 +19,8 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage",
 		"SublimeLinter-ruby",
+		"Vintage",
 		"SublimeLinter"
 	],
 	"open_files_in_new_window": false,
