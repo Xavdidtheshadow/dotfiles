@@ -35,8 +35,17 @@ alias ms="middleman server"
 alias xtime="wget http://c.xkcd.com/redirect/comic/now; open ./now; read; rm ./now;"
 
 ## ~ SINATRA ~~##
-alias sin='rerun ruby "${PWD##*/}.rb" -p "**/*.{rb,js,coffee,css,scss,sass,erb,html,haml,ru,yml,slim,md,json}"'
+alias sin=sinatra
 alias cig='lsof -i :4567'
+
+function sinatra()
+{
+    if [ -f ./config.ru ]; then
+        rerun "rackup -p 4567" -p "**/*.{rb,js,coffee,css,scss,sass,erb,html,haml,ru,yml,slim,md,json}"
+    else
+        rerun ruby "${PWD##*/}.rb" -p "**/*.{rb,js,coffee,css,scss,sass,erb,html,haml,ru,yml,slim,md,json}"
+    fi
+}
 
 ##~ GIT ~##
 alias g="git"
@@ -56,6 +65,7 @@ alias gq="git commit -m"
 alias disc="git reset --hard"
 alias shc="sh compile.sh"
 alias b="sh build.sh"
+alias t="ruby spec/test.rb"
 
 # from http://www.reddit.com/2e513y
 function gi() { curl http://www.gitignore.io/api/$@ ;}
@@ -115,3 +125,4 @@ export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
