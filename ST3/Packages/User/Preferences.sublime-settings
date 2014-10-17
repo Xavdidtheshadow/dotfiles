@@ -8,7 +8,9 @@
 	[
 		".sass-cache",
 		".git",
-		".cache"
+		".cache",
+		"node_modules"
+
 	],
 	"font_face": "Inconsolata",
 	"font_options":
@@ -20,8 +22,8 @@
 	"ignored_packages":
 	[
 		"SublimeLinter-ruby",
-		"Vintage",
-		"SublimeLinter"
+		"SublimeLinter",
+		"Vintage"
 	],
 	"open_files_in_new_window": false,
 	"scroll_past_end": true,
