@@ -33,10 +33,12 @@ alias http="python -m SimpleHTTPServer 1234"
 alias watch="sass --watch ."
 alias ms="middleman server"
 alias xtime="wget http://c.xkcd.com/redirect/comic/now; open ./now; read; rm ./now;"
+alias cda="cd -"
 
 ## ~ SINATRA ~~##
 alias sin=sinatra
 alias cig='lsof -i :4567'
+alias t=test_sinatra
 
 function sinatra()
 {
@@ -44,6 +46,15 @@ function sinatra()
         rerun "rackup -p 4567" -p "**/*.{rb,js,coffee,css,scss,sass,erb,html,haml,ru,yml,slim,md,json}"
     else
         rerun ruby "${PWD##*/}.rb" -p "**/*.{rb,js,coffee,css,scss,sass,erb,html,haml,ru,yml,slim,md,json}"
+    fi
+}
+
+function test_sinatra()
+{
+    if [ -f ./config.ru ]; then
+        bundle exec ruby spec/test.rb
+    else
+        ruby spec/test.rb
     fi
 }
 
@@ -65,7 +76,6 @@ alias gq="git commit -m"
 alias disc="git reset --hard"
 alias shc="sh compile.sh"
 alias b="sh build.sh"
-alias t="ruby spec/test.rb"
 
 # from http://www.reddit.com/2e513y
 function gi() { curl http://www.gitignore.io/api/$@ ;}

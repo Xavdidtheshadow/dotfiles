@@ -9,8 +9,8 @@
 		".sass-cache",
 		".git",
 		".cache",
-		"node_modules"
-
+		"node_modules",
+		".bundle"
 	],
 	"font_face": "Inconsolata",
 	"font_options":
@@ -21,9 +21,9 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"SublimeLinter-ruby",
 		"SublimeLinter",
-		"Vintage"
+		"Vintage",
+		"SublimeLinter-ruby"
 	],
 	"open_files_in_new_window": false,
 	"scroll_past_end": true,

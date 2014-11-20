@@ -83,38 +83,19 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Dropbox (Personal)/Saves/dotfiles</string>
+	<string>~/Dropbox/Saves/dotfiles</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
-	<key>NSTableView Columns KeyBingingTable</key>
-	<array>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATCG
-		</data>
-		<string>198</string>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATGG
-		</data>
-		<string>302</string>
-	</array>
-	<key>NSTableView Hidden Columns KeyBingingTable</key>
-	<array/>
-	<key>NSTableView Sort Ordering KeyBingingTable</key>
-	<array/>
 	<key>NSWindow Frame Preferences</key>
-	<string>2293 364 924 485 1440 103 2560 1418 </string>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>3282 623 384 129 1440 103 2560 1418 </string>
+	<string>258 184 924 485 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1591 372 1277 686 1440 103 2560 1418 </string>
+	<string>48 8 696 431 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>183 68 570 386 0 0 1440 878 </string>
+	<string>374 395 570 386 0 0 1440 877 </string>
 	<key>NeverWarnAboutShortLivedSessions_DD4C248D-5042-4E43-8D8D-BB406CEB6EB8</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1587,8 +1568,6 @@
 			<string>/Users/David</string>
 		</dict>
 	</array>
-	<key>NoSyncNeverRemindPrefsChangesCopy</key>
-	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1635,7 +1614,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/davidbrownman/Dropbox (Personal)/Saves/dotfiles</string>
+	<string>/Users/david/Dropbox/Saves/dotfiles</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1653,7 +1632,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-07-22T17:15:01Z</date>
+	<date>2014-10-27T11:23:32Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1689,7 +1668,7 @@
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
-	<string>Lucida Grande</string>
+	<string>.Helvetica Neue DeskInterface</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
@@ -1701,6 +1680,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20140518</string>
+	<string>2.0</string>
 </dict>
 </plist>

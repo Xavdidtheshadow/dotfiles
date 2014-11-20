@@ -3,6 +3,7 @@
 	"auto_match_enabled": true,
 	"extensions":
 	[
-		"hdbs"
+		"hdbs",
+		"twig"
 	]
 }
