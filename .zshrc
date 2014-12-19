@@ -37,8 +37,17 @@ alias ppj="python -m json.tool"
 alias viet="sudo vi /etc/hosts"
 
 ##~ SINATRA ~##
-alias sin='rerun ruby "${PWD##*/}.rb" -p "**/*.{rb,js,coffee,css,scss,sass,erb,html,haml,ru,yml,slim,md,json}"'
+alias sin=sinatra
 alias cig='lsof -i :4567'
+
+function sinatra()
+{
+    if [ -f ./config.ru ]; then
+        rerun "rackup -p 4567" -p "**/*.{rb,js,coffee,css,scss,sass,erb,html,haml,ru,yml,slim,json}"
+    else
+        rerun ruby "${PWD##*/}.rb" -p "**/*.{rb,js,coffee,css,scss,sass,erb,html,haml,ru,yml,slim,json}"
+    fi
+}
 
 ##~ GIT ~##
 alias g="git"
@@ -58,6 +67,7 @@ alias gq="git commit -m"
 alias disc="git reset --hard"
 alias shc="sh compile.sh"
 alias b="sh build.sh"
+alias t="ruby spec/test.rb"
 # push and set upstream branch
 alias gpu="git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
 
