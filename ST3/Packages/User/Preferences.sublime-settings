@@ -2,7 +2,7 @@
 	"auto_complete": false,
 	"auto_match_enabled": false,
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/User/Monokai Extended Bright (SL).tmTheme",
 	"ensure_newline_at_eof_on_save": false,
 	"folder_exclude_patterns":
 	[
@@ -10,7 +10,8 @@
 		".git",
 		".cache",
 		"node_modules",
-		".bundle"
+		".bundle",
+		".tmp"
 	],
 	"font_face": "Inconsolata",
 	"font_options":
@@ -21,9 +22,7 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"SublimeLinter",
-		"Vintage",
-		"SublimeLinter-ruby"
+		"Vintage"
 	],
 	"open_files_in_new_window": false,
 	"scroll_past_end": true,

@@ -1,0 +1,11 @@
+{
+    "no_multi_select_icons": false,
+    "bracket_styles": {
+        "single_quote": {
+            "icon": "none"
+        },
+        "double_quote": {
+            "icon": "none"
+        }
+    }
+}
