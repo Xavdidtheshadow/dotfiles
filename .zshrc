@@ -126,7 +126,7 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/share/npm/lib/node_modules/coffee-script/bin:/Users/$USER/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/$USER/.rvm/bin
+export PATH=$PATH:/usr/local/share/npm/lib/node_modules/coffee-script/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
