@@ -1,4 +1,0 @@
-2014-02-04 14:15:54
-Traceback (most recent call last):
-  File "/Users/wbond/Library/Application Support/Sublime Text 3/Packages/SFTP/sftp/listeners.py", line 257, in do_upload
-TypeError: unorderable types: NoneType() > int()

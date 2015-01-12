@@ -33,6 +33,7 @@ alias ms="middleman server"
 alias xtime="wget http://c.xkcd.com/redirect/comic/now; open ./now; read; rm ./now;"
 alias cda="cd -"
 # pretty print json
+# pipe json into it: echo '{"a": 1}' | ppj
 alias ppj="python -m json.tool"
 alias viet="sudo vi /etc/hosts"
 
