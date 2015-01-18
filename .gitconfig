@@ -4,7 +4,7 @@
 	username = Xavdidtheshadow
 [core]
 	editor = subl -n -w
-	excludesfile = /Users/davidbrownman/.gitignore_global
+	excludesfile = /Users/david/.gitignore_global
 [merge]
 	tool = vimdiff
 [color]
@@ -27,34 +27,19 @@
 	new = green
 
 [alias]
-	switch = !legit switch \"$@\"
-	branches = !legit branches
-	sprout = !legit sprout \"$@\"
-	unpublish = !legit unpublish \"$@\"
-	harvest = !legit harvest \"$@\"
-	sync = !legit sync \"$@\"
-	publish = !legit publish \"$@\"
-	graft = !legit graft \"$@\"
 
 	# Aliases
 	unadd = reset HEAD
 	tree = log --graph --oneline --decorate
-	purr = pull --rebase
 	all = commit -A
 	standup = log ––since yesterday ––author David
 
 	# Shorthands
 	l = log --graph --oneline --decorate  # alias of tree above
-	st = status -s
-	d = diff
-	br = branch
-	bra = branch -a
 
 	# typos
 	psuh = push
 	
-
-
 [credential]
 	helper = osxkeychain
 [push]
@@ -63,9 +48,3 @@
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true

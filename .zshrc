@@ -38,10 +38,9 @@ alias ppj="python -m json.tool"
 alias viet="sudo vi /etc/hosts"
 
 ##~ SINATRA ~##
-alias sin=sinatra
 alias cig='lsof -i :4567'
 
-function sinatra()
+function sin()
 {
     if [ -f ./config.ru ]; then
         rerun "rackup -p 4567" -p "**/*.{rb,js,coffee,css,scss,sass,erb,html,haml,ru,yml,slim,json}"
@@ -70,10 +69,10 @@ alias shc="sh compile.sh"
 alias b="sh build.sh"
 alias t="ruby spec/test.rb"
 # push and set upstream branch
-alias gpu="git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+function gpu() { REPO=$(git rev-parse --abbrev-ref HEAD); git push --set-upstream origin $REPO }
 
 # from http://www.reddit.com/2e513y
-function gi() { curl http://www.gitignore.io/api/$@ ;}
+function gi() { curl https://www.gitignore.io/api/$@ ;}
 
 ##~ HEROKU ~##
 alias gphm="git push heroku master"
@@ -113,8 +112,8 @@ function home()
     alias db="cd $DROPBOX"
 
     ## CUSTOM GIT ##
-    alias nr="sh $DROPBOX/new_repo.sh" 
-    alias prune="sh $DROPBOX/prune_branches.sh $1"
+    alias nr="sh $DOTFILES/new_repo.sh" 
+    alias prune="sh $DOTFILES/prune_branches.sh $1"
     function clo() { git clone git@github.com:xavdidtheshadow/$1.git }
 }
 
