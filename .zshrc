@@ -29,32 +29,51 @@ alias zshow="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Fin
 alias sz="source ~/.zshrc"
 alias http="python -m SimpleHTTPServer 1234"
 alias watch="sass --watch ."
+alias mip="ifconfig |grep inet"
+alias ip="curl https://ipecho.net/plain ;echo"
 alias ms="middleman server"
 alias xtime="wget http://c.xkcd.com/redirect/comic/now; open ./now; read; rm ./now;"
 alias cda="cd -"
+function lenv() 
+{
+    env $(cat .env | xargs) $1
+}
 # pretty print json
-# pipe json into it: echo '{"a": 1}' | ppj
+# eg: echo '{"a": 1}' | ppj
 alias ppj="python -m json.tool"
 alias viet="sudo vi /etc/hosts"
+alias pir="pip install -r requirements.txt"
 
 ##~ SINATRA ~##
 alias cig='lsof -i :4567'
 
 function sin()
 {
-    if [ -f ./config.ru ]; then
-        rerun "rackup -p 4567" -p "**/*.{rb,js,coffee,css,scss,sass,erb,html,haml,ru,yml,slim,json}"
+    if [ -f ./Procfile.dev ]; then
+        rerun "foreman start -f Procfile.dev"
     else
-        rerun ruby "${PWD##*/}.rb" -p "**/*.{rb,js,coffee,css,scss,sass,erb,html,haml,ru,yml,slim,json}"
+        sinatra
     fi
 }
+
+function sinatra()
+{
+    if [ -f ./config.ru ]; then
+        rerun "rackup -p 4567" -p "**/*.{rb,js,coffee,css,scss,erb,html,haml,ru,yml,json}"
+    else
+        rerun ruby "${PWD##*/}.rb" -p "**/*.{rb,js,coffee,css,scss,erb,html,haml,ru,yml,json}"
+    fi
+}
+
+##~ NODE ~##
+alias nod="foreman start -f Procfile.dev -p 3000"
 
 ##~ GIT ~##
 alias g="git"
 alias purr="git pull --rebase"
 alias gs="git status"
-alias mip="ifconfig |grep inet"
-alias ip="curl http://ipecho.net/plain ;echo"
+
+alias gq="git commit -m"
 function ggg() { git add --all .; git commit -m "$1" }
 function ggu() { git add -u .; git commit -m "$1" }
 alias ch="git checkout"
@@ -63,10 +82,8 @@ alias nb="git push -u origin"
 # stolen from Nick Quinlan
 alias pushit="open -g spotify:track:0GugYsbXWlfLOgsmtsdxzg; git push"
 
-alias gq="git commit -m"
 alias disc="git reset --hard"
-alias shc="sh compile.sh"
-alias b="sh build.sh"
+alias b="./build.sh"
 alias t="ruby spec/test.rb"
 # push and set upstream branch
 function gpu() { REPO=$(git rev-parse --abbrev-ref HEAD); git push --set-upstream origin $REPO }
@@ -76,6 +93,7 @@ function gi() { curl https://www.gitignore.io/api/$@ ;}
 
 ##~ HEROKU ~##
 alias gphm="git push heroku master"
+alias hcp="heroku config:pull"
 
 ##~ RAILS ~##
 alias rs="rails server"
@@ -84,7 +102,6 @@ alias rc="rails console"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 
-# I don't actually know what these do
 plugins=(git rails ruby subl)
 
 ##~ RIQ ~##
@@ -93,9 +110,9 @@ function work()
     export JAVA_HOME="$(/usr/libexec/java_home)"
     export PROJECTS_ROOT=$HOME/projects
     export RIQ=$PROJECTS_ROOT/riq
-    source $RIQ/scripts/dev_bash_profile.sh
     export DEVENV=$PROJECTS_ROOT/devenv 
     export PATH=$PATH:$DEVENV/bin
+    source $DEVENV/bin/dev_bash_profile.sh
 
     export DROPBOX=/Users/dbrownman/Dropbox
     export DOTFILES=$DROPBOX/Saves/dotfiles
@@ -108,6 +125,10 @@ function home()
     export DROPBOX=/Users/david/Dropbox
     export DOTFILES=$DROPBOX/Saves/dotfiles
     export PROJECTS_ROOT=$HOME/projects
+
+    export DOCKER_HOST=tcp://192.168.59.103:2376
+    export DOCKER_CERT_PATH=/Users/david/.boot2docker/certs/boot2docker-vm
+    export DOCKER_TLS_VERIFY=1
 
     alias db="cd $DROPBOX"
 
