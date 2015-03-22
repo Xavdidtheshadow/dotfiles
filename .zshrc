@@ -94,6 +94,16 @@ function gi() { curl https://www.gitignore.io/api/$@ > .gitignore}
 ##~ HEROKU ~##
 alias gphm="git push heroku master"
 alias hcp="heroku config:pull"
+function mongolab()
+{
+    URI=$($DOTFILES/util/mongolab.rb)
+    if ! [ -z $URI ]; then
+        # not sure why this is double wrapped, but it is
+        $(echo "mongo $URI")
+    else
+        echo No .env found
+    fi
+}
 
 ##~ RAILS ~##
 alias rs="rails server"
