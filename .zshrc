@@ -66,7 +66,7 @@ function sinatra()
 }
 
 ##~ NODE ~##
-alias nod="foreman start -f Procfile.dev -p 3000"
+alias nod="foreman start -f Procfile.dev"
 
 ##~ GIT ~##
 alias g="git"
@@ -89,7 +89,7 @@ alias t="ruby spec/test.rb"
 function gpu() { REPO=$(git rev-parse --abbrev-ref HEAD); git push --set-upstream origin $REPO }
 
 # from http://www.reddit.com/2e513y
-function gi() { curl https://www.gitignore.io/api/$@ ;}
+function gi() { curl https://www.gitignore.io/api/$@ > .gitignore}
 
 ##~ HEROKU ~##
 alias gphm="git push heroku master"
@@ -133,8 +133,8 @@ function home()
     alias db="cd $DROPBOX"
 
     ## CUSTOM GIT ##
-    alias nr="sh $DOTFILES/new_repo.sh" 
-    alias prune="sh $DOTFILES/prune_branches.sh $1"
+    alias nr="./$DOTFILES/util/new_repo.sh" 
+    alias prune="./$DOTFILES/util/prune_branches.sh $1"
     function clo() { git clone git@github.com:xavdidtheshadow/$1.git }
 }
 
