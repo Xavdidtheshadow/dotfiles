@@ -1,0 +1,4 @@
+[
+    { "keys": ["super+k", "super+m"], "command": "set_mark" },
+    { "keys": ["alt+space"], "command": "auto_complete" }
+]

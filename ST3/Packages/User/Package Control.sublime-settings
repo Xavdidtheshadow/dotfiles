@@ -1,0 +1,42 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Base16 Color Schemes",
+		"Better CoffeeScript",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"Dockerfile Syntax Highlighting",
+		"EasyDiff",
+		"EJS",
+		"Foundation 5 Snippets",
+		"Git",
+		"GitGutter",
+		"Haml",
+		"Jade",
+		"Less Tabs",
+		"Monokai Extended",
+		"Neon Color Scheme",
+		"Package Control",
+		"PackageResourceViewer",
+		"Python Improved",
+		"Sass",
+		"SFTP",
+		"sublime-github",
+		"SublimeLinter",
+		"SublimeLinter-coffee",
+		"SublimeLinter-csslint",
+		"SublimeLinter-haml",
+		"SublimeLinter-jshint",
+		"SublimeLinter-ruby",
+		"Theme - Soda",
+		"Todo.txt Syntax",
+		"TodoReview"
+	],
+	"repositories":
+	[
+		"https://github.com/metalelf0/sublime-t0d0"
+	]
+}

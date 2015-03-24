@@ -1,0 +1,1560 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"angular",
+				"angular-ui-router"
+			],
+			[
+				"bower",
+				"bower_components"
+			],
+			[
+				"script",
+				"scripts"
+			],
+			[
+				"dro",
+				"DROPBOX"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/david/projects/quid_api/server.js",
+			"settings":
+			{
+				"buffer_size": 728,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/david/projects/quid_api/models/Games.js",
+			"settings":
+			{
+				"buffer_size": 1694,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/david/projects/quid_api/models/Leagues.js",
+			"settings":
+			{
+				"buffer_size": 340,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/david/projects/quid_api/routes/leagues.js",
+			"settings":
+			{
+				"buffer_size": 1205,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/david/projects/quid_api/models/Teams.js",
+			"settings":
+			{
+				"buffer_size": 250,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/david/projects/quid_api/routes/teams.js",
+			"settings":
+			{
+				"buffer_size": 534,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/david/projects/quid_api/models/People.js",
+			"settings":
+			{
+				"buffer_size": 918,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"blam",
+				"Git: Blame"
+			],
+			[
+				"space",
+				"Snippet: class .. < Test::Unit::TestCase .. end"
+			],
+			[
+				"test",
+				"Snippet: def test_ .. end"
+			],
+			[
+				"spaces",
+				"Snippet: class .. < Test::Unit::TestCase .. end"
+			],
+			[
+				"statu",
+				"Git: Status"
+			],
+			[
+				"html",
+				"Snippet: html"
+			],
+			[
+				"blame",
+				"Git: Blame"
+			],
+			[
+				"bla",
+				"Git: Blame"
+			],
+			[
+				"history",
+				"GitHub: History"
+			],
+			[
+				"old",
+				"Less Tabs: Close Old Tabs"
+			],
+			[
+				"snip",
+				"Snippet: html"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"gp",
+				"Git: Push"
+			],
+			[
+				"qui",
+				"Git: Quick Commit"
+			],
+			[
+				"ad",
+				"Git: Add..."
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"todo",
+				"TodoReview: Project Files"
+			],
+			[
+				"tod",
+				"TodoReview: Project and Open Files"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"disable",
+				"SublimeLinter: Disable Debug Mode"
+			],
+			[
+				"linter",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"resour",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"packag",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"lsit",
+				"Package Control: List Packages"
+			],
+			[
+				"diff",
+				"Git: Diff Current File"
+			]
+		],
+		"width": 516.0
+	},
+	"console":
+	{
+		"height": 469.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/david/projects/schedulizer",
+		"/Users/david/projects/quid_api",
+		"/Users/david/projects/quid_api/models",
+		"/Users/david/projects/quid_api/routes"
+	],
+	"file_history":
+	[
+		"/Users/david/projects/quid_api/routes/schedules.js",
+		"/Users/david/projects/quid_api/models/Teams.js",
+		"/Users/david/projects/schedulizer/pull_attendees.rb",
+		"/Users/david/projects/schedulizer/LICENSE.txt",
+		"/Users/david/projects/quid_api/package.json",
+		"/Users/david/projects/quid_api/Procfile.dev",
+		"/Users/david/projects/quid_api/models/Schedules.js",
+		"/Users/david/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/david/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/david/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/david/projects/integrations/sdks/ruby/riq_obj.rb",
+		"/Users/david/projects/integrations/sdks/ruby/riq_base.rb",
+		"/Users/david/projects/integrations/sdks/ruby/client.rb",
+		"/Users/david/projects/integrations/sdks/ruby/lists.rb",
+		"/Users/david/projects/integrations/sdks/ruby/error.rb",
+		"/Users/david/projects/parse-ruby/fixtures/vcr_cassettes/test_empty_response.yml",
+		"/Users/david/projects/integrations/sdks/python/relateiq/riq_child.py",
+		"/Users/david/projects/parse-ruby/lib/parse/client.rb",
+		"/Users/david/projects/integrations/sdks/ruby/Gemfile",
+		"/Users/david/projects/parse-ruby/fixtures/vcr_cassettes/test_get_installation.yml",
+		"/Users/david/projects/parse-ruby/.gitignore",
+		"/Users/david/projects/refbook/refbook.rb",
+		"/Users/david/Desktop/t.rb",
+		"/Users/david/projects/parse-ruby/Rakefile",
+		"/Users/david/projects/integrations/sdks/ruby/contacts.rb",
+		"/Users/david/projects/integrations/sdks/ruby/users.rb",
+		"/Users/david/projects/integrations/sdks/ruby/listitem.rb",
+		"/Users/david/projects/integrations/sdks/ruby/events.rb",
+		"/Users/david/projects/integrations/sdks/ruby/accounts.rb",
+		"/Users/david/projects/schedulizer/README.md",
+		"/Users/david/Desktop/sched.txt",
+		"/Users/david/projects/personal_website/timeline.html",
+		"/Users/david/projects/refbook/views/test_links.haml",
+		"/Users/david/projects/refbook/spec/test.rb",
+		"/Users/david/projects/refbook/text.json",
+		"/Users/david/projects/refbook/README.md",
+		"/Users/david/projects/quid_timer/css/foundation.css",
+		"/Users/david/projects/quid_timer/css/normalize.css",
+		"/Users/david/projects/quid_timer/css/foundation.min.css",
+		"/Users/david/projects/quid_timer/js/foundation/foundation.offcanvas.js",
+		"/Users/david/projects/quid_timer/js/foundation/foundation.slider.js",
+		"/Users/david/projects/quid_timer/js/vendor/runner.min.js",
+		"/Users/david/projects/schedulizer/ruby/we_resultv2.txt",
+		"/Users/david/projects/schedulizer/ruby/we_results.csv",
+		"/Users/david/projects/schedulizer/files/ca_games.txt",
+		"/Users/david/projects/schedulizer/files/au_result_v2.txt",
+		"/Users/david/projects/schedulizer/files/au_result_v1.txt",
+		"/Users/david/Desktop/ref_scores.txt",
+		"/Users/david/projects/schedulizer/ruby/we_result.txt",
+		"/Users/david/projects/schedulizer/ruby/referee.rb",
+		"/Users/david/projects/schedulizer/ruby/we_teams.txt",
+		"/Users/david/projects/schedulizer/files/ca_teams.txt",
+		"/Users/david/projects/schedulizer/files/au_teams.txt",
+		"/Users/david/projects/schedulizer/ruby/we_games.txt",
+		"/Users/david/projects/schedulizer/ruby/game.rb",
+		"/Users/david/projects/schedulizer/.gitignore",
+		"/Users/david/projects/western_regionals/public/index.html",
+		"/Users/david/projects/western_regionals/public/views/check.html",
+		"/Users/david/projects/western_regionals/public/views/form.html",
+		"/Users/david/projects/western_regionals/app/models/Persons.js",
+		"/Users/david/projects/western_regionals/app/routes.js",
+		"/Users/david/projects/western_regionals/LICENSE.txt",
+		"/Users/david/projects/western_regionals/public/js/app.js",
+		"/Users/david/Desktop/movies.txt",
+		"/Users/david/projects/western_regionals/public/css/the.css",
+		"/Users/david/projects/western_regionals/Procfile_dev",
+		"/Users/david/projects/western_regionals/server.js",
+		"/Users/david/projects/western_regionals/README.md",
+		"/Users/david/projects/corp-site/craft/app/translations/he.php",
+		"/Users/david/projects/corp-site/craft/app/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderInterface.php",
+		"/Users/david/projects/corp-site/craft/plugins/minimee/library/vendor/mrclay/minify/HISTORY.txt",
+		"/Users/david/projects/corp-site/public/assets/css/base.css",
+		"/Users/david/projects/corp-site/craft/app/framework/db/schema/sqlite/CSqliteSchema.php",
+		"/Users/david/projects/corp-site/craft/app/services/CacheService.php",
+		"/Users/david/projects/corp-site/corporate",
+		"/Users/david/projects/corp-site/public/assets/img/Icons/Link_Arrow.svg",
+		"/Users/david/projects/corp-site/craft/config/license.key",
+		"/Users/david/projects/internal_tools/boxspring/boxspring.rb",
+		"/Users/david/projects/annie/Dockerfile",
+		"/Users/david/.zshrc",
+		"/Users/david/projects/internal_tools/boxspring/Dockerfile",
+		"/Users/david/Dropbox/Saves/dotfiles/.gitconfig",
+		"/Users/david/Dropbox/Saves/dotfiles/.gitignore_global",
+		"/Users/david/projects/western_regionals/public/libs/angular/angular.js",
+		"/Users/david/projects/western_regionals/public/views/conf.html",
+		"/Users/david/projects/western_regionals/public/views/info.html",
+		"/Users/david/projects/western_regionals/bower.json",
+		"/Users/david/projects/western_regionals/config/db.js",
+		"/Users/david/projects/western_regionals/.bowerrc",
+		"/Users/david/projects/western_regionals/.gitignore",
+		"/Users/david/projects/western_regionals/app/models/Teams.js",
+		"/Users/david/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/david/.gitconfig",
+		"/Users/david/projects/western_regionals/package.json",
+		"/Users/david/.gitignore_global",
+		"/Users/david/.gitignore.global",
+		"/Users/david/projects/western_regionals/public/libs/bootstrap/less/mixins/vendor-prefixes.less",
+		"/Users/david/projects/western_regionals/public/libs/jquery/src/css/var/cssExpand.js",
+		"/Users/david/projects/western_regionals/public/libs/jquery/src/effects.js",
+		"/Users/david/projects/western_regionals/public/libs/bootstrap/js/scrollspy.js",
+		"/Users/david/projects/riq_news/package.json",
+		"/Users/david/projects/western_regionals/public/stylesheets/the.css",
+		"/Users/david/projects/western_regionals/western_front/index.html",
+		"/Users/david/projects/western_regionals/public/views/index.html",
+		"/Users/david/projects/western_regionals/routes/index.js",
+		"/Users/david/projects/riq_news/views/index.ejs",
+		"/Users/david/projects/western_regionals/views/partials/index.jade",
+		"/Users/david/projects/western_regionals/views/partials/scripts.jade",
+		"/Users/david/projects/western_regionals/views/layout.jade",
+		"/Users/david/projects/western_regionals/western_front/front.js",
+		"/Users/david/projects/western_regionals/public/views/base.html",
+		"/Users/david/projects/western_regionals/bin/www",
+		"/Users/david/projects/western_regionals/western_front/form.html",
+		"/Users/david/projects/western_regionals/views/havei.jade",
+		"/Users/david/projects/western_regionals/views/index.jade",
+		"/Users/david/projects/western_regionals/views/partials/head.jade",
+		"/Users/david/projects/western_regionals/public/javascripts/aang.js",
+		"/Users/david/projects/western_regionals/western_front/base.html",
+		"/Users/david/projects/western_regionals/western_front/bower_components/jquery/src/ajax/script.js",
+		"/Users/david/projects/western_regionals/western_front/bower_components/jquery/src/core/var/rsingleTag.js",
+		"/Users/david/projects/western_regionals/western_front/bower_components/jquery/src/css/var/rmargin.js",
+		"/Users/david/projects/western_regionals/western_front/bower_components/jquery/src/core/init.js",
+		"/Users/david/projects/western_regionals/western_front/bower_components/jquery/src/intro.js",
+		"/Users/david/projects/western_regionals/western_front/bower_components/jquery/src/css/var/isHidden.js",
+		"/Users/david/projects/western_regionals/views/stats.jade",
+		"/Users/david/projects/riq_news/public/javascripts/angularApp.js",
+		"/Users/david/projects/western_regionals/western_front/bower_components/jquery/src/core/parseHTML.js",
+		"/Users/david/projects/western_regionals/western_front/bower_components/jquery/src/ajax/parseJSON.js"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"",
+			"-angular*.js*",
+			"-angular*.js",
+			"-angular.*.js",
+			"-angular.js",
+			"",
+			"*.haml",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Team",
+			"configs",
+			"fetch",
+			"parse",
+			"init(",
+			"init ",
+			"init",
+			"@@client",
+			"@@client\\",
+			"@@client",
+			"cache",
+			"client",
+			"expire",
+			"expirre",
+			"client",
+			"api_key",
+			"client",
+			"then",
+			"\"",
+			"node",
+			"+",
+			"\"",
+			"not",
+			"payload",
+			"\"",
+			"mongo",
+			"agg",
+			"input",
+			"ng-show",
+			"fat",
+			"janos",
+			"kayl ",
+			"kayl l",
+			"kayl",
+			"kayl ",
+			".playing(",
+			".playing",
+			"\\d:",
+			"\\:$",
+			"playing(",
+			"team'",
+			"g.playing",
+			"lbqc",
+			"@wide",
+			"fals",
+			"pp",
+			"\\|e$",
+			"\\|d$",
+			"\\|C$",
+			"\\|B$",
+			"\\|A$",
+			"\\|$",
+			"svs",
+			"CAL",
+			"|C",
+			")",
+			"form-box",
+			"json",
+			"goal",
+			"signup",
+			"mobil",
+			"sha",
+			"populate",
+			"limitto",
+			"orderbyfil",
+			"limit",
+			"orderbyfil",
+			"order",
+			"/search",
+			"popul",
+			"persons",
+			"teams",
+			"activeta",
+			"check",
+			"loading",
+			"contain",
+			"required",
+			"dates",
+			"required",
+			"oncli",
+			"shc",
+			"start",
+			",",
+			"ng-",
+			"club",
+			"|",
+			"requi",
+			"/posts/",
+			"postpromise",
+			"/home",
+			"/posts",
+			"posts",
+			"upvot",
+			"arro",
+			"css",
+			"parse::",
+			"parse",
+			"parse.",
+			".rvm",
+			"path",
+			"dbrow",
+			"res",
+			"cpu",
+			"clo",
+			"fromuser",
+			"/form",
+			"url",
+			"bower",
+			"bootst",
+			"css",
+			"^Like",
+			"fire",
+			"localhost",
+			"local",
+			"allow",
+			"settings",
+			"origin",
+			"headers",
+			"%hr",
+			"todo",
+			"reset.css",
+			"paypal",
+			"ausq",
+			"aus",
+			"icon",
+			"icons",
+			"ismobilere",
+			"mongo"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/david/projects/quid_api/server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 728,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								421,
+								421
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended Bright (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/david/projects/quid_api/models/Games.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1694,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								752,
+								752
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended Bright (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/david/projects/quid_api/models/Leagues.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 340,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								107,
+								107
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended Bright (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/david/projects/quid_api/routes/leagues.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended Bright (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/david/projects/quid_api/models/Teams.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended Bright (SL).tmTheme",
+							"history_list_is_closing": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/david/projects/quid_api/routes/teams.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended Bright (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/david/projects/quid_api/models/People.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 918,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								455,
+								455
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended Bright (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 332.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 108.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"project": "quid_api.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"teams",
+				"quid_api/routes/teams.js"
+			],
+			[
+				"team",
+				"quid_api/models/Teams.js"
+			],
+			[
+				"leag",
+				"quid_api/routes/leagues.js"
+			],
+			[
+				"lea",
+				"quid_api/models/Leagues.js"
+			],
+			[
+				"peop",
+				"quid_api/models/People.js"
+			],
+			[
+				"error",
+				"ruby/error.rb"
+			],
+			[
+				"client",
+				"relateiq/client.py"
+			],
+			[
+				"gem",
+				"ruby/Gemfile"
+			],
+			[
+				"ref",
+				"ruby/referee.rb"
+			],
+			[
+				"game",
+				"ruby/game.rb"
+			],
+			[
+				"app",
+				"public/js/app.js"
+			],
+			[
+				"time",
+				"timeline.html"
+			],
+			[
+				"testing",
+				"views/testing.haml"
+			],
+			[
+				"ap",
+				"js/app.js"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"csv",
+				"ruby/we_results.csv"
+			],
+			[
+				"gam",
+				"ruby/game.rb"
+			],
+			[
+				"v2",
+				"ruby/we_resultv2.txt"
+			],
+			[
+				"sche",
+				"ruby/schedule.rb"
+			],
+			[
+				"ann",
+				"annie.rb"
+			],
+			[
+				"erso",
+				"app/models/Persons.js"
+			],
+			[
+				"in",
+				"public/index.html"
+			],
+			[
+				"che",
+				"public/views/check.html"
+			],
+			[
+				"for",
+				"public/views/form.html"
+			],
+			[
+				"pers",
+				"app/models/Persons.js"
+			],
+			[
+				"stats",
+				"public/views/stats.html"
+			],
+			[
+				"rou",
+				"app/routes.js"
+			],
+			[
+				"ser",
+				"server.js"
+			],
+			[
+				".scss",
+				"public/assets/scss/base.scss"
+			],
+			[
+				"lay",
+				"craft/templates/_layout.twig"
+			],
+			[
+				"buil",
+				"build.sh"
+			],
+			[
+				"dock",
+				"Dockerfile"
+			],
+			[
+				"form",
+				"public/views/form.html"
+			],
+			[
+				"css",
+				"public/css/the.css"
+			],
+			[
+				"inde",
+				"public/index.html"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"db",
+				"config/db.js"
+			],
+			[
+				"confi",
+				"config/db.js"
+			],
+			[
+				"proc",
+				"Procfile_dev"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"bower",
+				"bower.json"
+			],
+			[
+				"check",
+				"public/views/check.html"
+			],
+			[
+				"the",
+				"public/css/the.css"
+			],
+			[
+				"pro",
+				"Procfile_dev"
+			],
+			[
+				"post.",
+				"models/Posts.js"
+			],
+			[
+				"mon",
+				"models/Comments.js"
+			],
+			[
+				"the.",
+				"western_regionals/public/stylesheets/the.css"
+			],
+			[
+				"inde.html",
+				"western_regionals/public/views/index.html"
+			],
+			[
+				"layou",
+				"western_regionals/views/layout.jade"
+			],
+			[
+				"scrip",
+				"western_regionals/views/partials/scripts.jade"
+			],
+			[
+				"index.h",
+				"western_regionals/western_front/index.html"
+			],
+			[
+				"fron",
+				"western_regionals/western_front/front.js"
+			],
+			[
+				"front",
+				"western_regionals/western_front/front.js"
+			],
+			[
+				"aang",
+				"western_regionals/public/javascripts/aang.js"
+			],
+			[
+				"inde.ja",
+				"western_regionals/views/index.jade"
+			],
+			[
+				"app.",
+				"western_regionals/app.js"
+			],
+			[
+				"scri",
+				"western_regionals/views/partials/scripts.jade"
+			],
+			[
+				"aan",
+				"western_regionals/public/javascripts/aang.js"
+			],
+			[
+				"partials",
+				"western_regionals/views/partials/head.jade"
+			],
+			[
+				"angul",
+				"riq_news/public/javascripts/angularApp.js"
+			],
+			[
+				"ha",
+				"views/havei.jade"
+			],
+			[
+				"posts",
+				"riq-news/models/Posts.js"
+			],
+			[
+				"comm",
+				"riq-news/models/Comments.js"
+			],
+			[
+				"post",
+				"riq-news/models/Posts.js"
+			],
+			[
+				"comment",
+				"riq-news/models/Comments.js"
+			],
+			[
+				"www",
+				"riq-news/bin/www"
+			],
+			[
+				"pak",
+				"riq-news/package.json"
+			],
+			[
+				"regi",
+				"app/views/register.html"
+			],
+			[
+				"log",
+				"app/views/login.html"
+			],
+			[
+				"nav",
+				"app/views/nav.html"
+			],
+			[
+				"auth",
+				"app/scripts/services/auth.js"
+			],
+			[
+				"bower.json",
+				"bower.json"
+			],
+			[
+				"main.css",
+				"app/styles/main.scss"
+			],
+			[
+				"index",
+				"app/index.html"
+			],
+			[
+				"jshi",
+				"yangular/.jshintrc"
+			],
+			[
+				"fire",
+				"firespace/firespace.rb"
+			],
+			[
+				"payp",
+				"views/_paypal.haml"
+			],
+			[
+				"scss",
+				"views/refbook.scss"
+			],
+			[
+				"testi",
+				"views/test_links.haml"
+			],
+			[
+				"ajp",
+				"public/js/app.js"
+			],
+			[
+				"refb",
+				"refbook.rb"
+			],
+			[
+				"au",
+				"views/AU_paypal.haml"
+			],
+			[
+				"us",
+				"views/US_paypal.haml"
+			],
+			[
+				"qu",
+				"views/QU_paypal.haml"
+			],
+			[
+				"eu",
+				"views/EU_paypal.haml"
+			],
+			[
+				"uspa",
+				"views/US_paypal.haml"
+			],
+			[
+				"app.j",
+				"public/js/app.js"
+			],
+			[
+				"ca",
+				"views/CA_paypal.haml"
+			],
+			[
+				"paypa",
+				"views/CA_paypal.haml"
+			],
+			[
+				"risk",
+				"views/risk.haml"
+			],
+			[
+				"",
+				"views/js.haml"
+			],
+			[
+				"faq",
+				"views/faq.haml"
+			],
+			[
+				"pay",
+				"views/pay.haml"
+			],
+			[
+				"sear",
+				"views/search.haml"
+			],
+			[
+				"head",
+				"views/headers.haml"
+			],
+			[
+				"main.js",
+				"app/scripts/controllers/main.js"
+			],
+			[
+				"app.js",
+				"app/scripts/app.js"
+			],
+			[
+				"main.h",
+				"app/views/main.html"
+			],
+			[
+				"index.",
+				"app/index.html"
+			],
+			[
+				"bowerc",
+				".bowerrc"
+			],
+			[
+				"cont",
+				"views/contact.erb"
+			],
+			[
+				"revie",
+				"views/review.haml"
+			],
+			[
+				"create",
+				"views/create.haml"
+			],
+			[
+				"t",
+				"text.json"
+			],
+			[
+				"field",
+				"views/field_test.haml"
+			],
+			[
+				"admin",
+				"views/admin.haml"
+			],
+			[
+				"txt",
+				"text.json"
+			],
+			[
+				"test",
+				"spec/test.rb"
+			],
+			[
+				"sch",
+				"schedule.rb"
+			],
+			[
+				"refs",
+				"refs.txt"
+			],
+			[
+				"text",
+				"text.json"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"testin",
+				"views/test_links.haml"
+			],
+			[
+				"prof",
+				"views/profile.haml"
+			],
+			[
+				"help",
+				"views/help.haml"
+			],
+			[
+				"gemfi",
+				"Gemfile.lock"
+			],
+			[
+				"publi",
+				"views/public_profile.haml"
+			],
+			[
+				"profil",
+				"views/profile.haml"
+			],
+			[
+				"sea",
+				"views/search.haml"
+			],
+			[
+				"layout",
+				"layout.json"
+			],
+			[
+				"review",
+				"views/review.haml"
+			],
+			[
+				"scs",
+				"views/refbook.scss"
+			],
+			[
+				"acces",
+				"views/access.haml"
+			],
+			[
+				"git",
+				".gitignore"
+			],
+			[
+				"spe",
+				"spec/test.rb"
+			],
+			[
+				"langs",
+				"views/langs.haml"
+			],
+			[
+				"revi",
+				"views/edit_review.haml"
+			],
+			[
+				"about",
+				"views/about.haml"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

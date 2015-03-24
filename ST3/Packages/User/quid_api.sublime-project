@@ -1,0 +1,13 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/Users/david/projects/schedulizer"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/david/projects/quid_api"
+		}
+	]
+}

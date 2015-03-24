@@ -1,0 +1,59 @@
+{
+	"auto_complete": false,
+	"auto_match_enabled": false,
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/User/Monokai Extended Bright (SL).tmTheme",
+	"ensure_newline_at_eof_on_save": false,
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace",
+		".env"
+	],
+	"folder_exclude_patterns":
+	[
+		".sass-cache",
+		".git",
+		".cache",
+		"node_modules",
+		".bundle",
+		".tmp",
+		"libs",
+		"bower_components"
+	],
+	"font_face": "Inconsolata",
+	"font_options":
+	[
+		"no_italic"
+	],
+	"font_size": 13.0,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"open_files_in_new_window": false,
+	"scroll_past_end": true,
+	"soda_classic_tabs": true,
+	"theme": "Soda Dark 3.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"word_wrap": true
+}

@@ -66,7 +66,14 @@ function sinatra()
 }
 
 ##~ NODE ~##
-alias nod="foreman start -f Procfile.dev"
+function nod()
+{
+    if [ -f ./Procfile.dev ]; then
+        rerun "foreman start -f Procfile.dev"
+    else
+        nodemon
+    fi
+}
 
 ##~ GIT ~##
 alias g="git"

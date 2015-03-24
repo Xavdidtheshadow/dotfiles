@@ -2,3 +2,4 @@
 .env
 Gemfile.lock
 ST3
+!ST3/Packages/User/*.sublime-*
