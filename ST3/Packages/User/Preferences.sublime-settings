@@ -37,7 +37,9 @@
 		".bundle",
 		".tmp",
 		"libs",
-		"bower_components"
+		"bower_components",
+		"doc",
+		".yardoc"
 	],
 	"font_face": "Inconsolata",
 	"font_options":

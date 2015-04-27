@@ -1,6 +1,7 @@
 {
 	"auto_complete": true,
 	"auto_match_enabled": true,
+    "tab_size": 2,
 	"extensions":
 	[
 		"hdbs",

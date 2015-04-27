@@ -44,6 +44,13 @@ alias ppj="python -m json.tool"
 alias viet="sudo vi /etc/hosts"
 alias pir="pip install -r requirements.txt"
 
+function port()
+{
+    lsof -i ":$1"
+}
+
+alias fuck='$(thefuck $(fc -ln -1))'
+
 ##~ SINATRA ~##
 alias cig='lsof -i :4567'
 
@@ -69,7 +76,7 @@ function sinatra()
 function nod()
 {
     if [ -f ./Procfile.dev ]; then
-        rerun "foreman start -f Procfile.dev"
+        foreman start -f Procfile.dev
     else
         nodemon
     fi
