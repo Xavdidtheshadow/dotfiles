@@ -51,6 +51,18 @@ function port()
 
 alias fuck='$(thefuck $(fc -ln -1))'
 
+##~ RUBY ~##
+function gembuild()
+{
+    rm *.gem
+    gem build $(echo *.gemspec)
+    read "push?Do you want to push to RubyGems?"
+    if [[ "$push" =~ ^[Yy]$ ]]
+    then
+        gem push $(echo *.gem)
+    fi
+}
+
 ##~ SINATRA ~##
 alias cig='lsof -i :4567'
 
