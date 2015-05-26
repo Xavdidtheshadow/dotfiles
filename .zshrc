@@ -30,7 +30,7 @@ alias sz="source ~/.zshrc"
 alias http="python -m SimpleHTTPServer 1234"
 alias watch="sass --watch ."
 alias mip="ifconfig |grep inet"
-alias ip="curl https://ipecho.net/plain ;echo"
+alias ip="curl http://ipecho.net/plain ;echo"
 alias ms="middleman server"
 alias xtime="wget http://c.xkcd.com/redirect/comic/now; open ./now; read; rm ./now;"
 alias cda="cd -"
@@ -49,14 +49,18 @@ function port()
     lsof -i ":$1"
 }
 
-alias fuck='$(thefuck $(fc -ln -1))'
+# takes tag of a docker container and runs bash in said container
+function inv()
+{
+    docker run -it $1 bash
+}
 
 ##~ RUBY ~##
 function gembuild()
 {
     rm *.gem
     gem build $(echo *.gemspec)
-    read "push?Do you want to push to RubyGems?"
+    read "push?Do you want to push to RubyGems? "
     if [[ "$push" =~ ^[Yy]$ ]]
     then
         gem push $(echo *.gem)
@@ -69,7 +73,7 @@ alias cig='lsof -i :4567'
 function sin()
 {
     if [ -f ./Procfile.dev ]; then
-        rerun "foreman start -f Procfile.dev"
+        foreman start -f Procfile.dev
     else
         sinatra
     fi

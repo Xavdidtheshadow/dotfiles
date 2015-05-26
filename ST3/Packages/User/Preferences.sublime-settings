@@ -1,4 +1,11 @@
 {
+	"added_words":
+	[
+		"args",
+		"param",
+		"http",
+		"params"
+	],
 	"auto_complete": false,
 	"auto_match_enabled": false,
 	"bold_folder_labels": true,
@@ -26,7 +33,8 @@
 		"*.psd",
 		"*.db",
 		"*.sublime-workspace",
-		".env"
+		".env",
+		"*.gem"
 	],
 	"folder_exclude_patterns":
 	[
