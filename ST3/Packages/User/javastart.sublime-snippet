@@ -1,8 +1,8 @@
 <snippet>
     <content><![CDATA[
-public class HelloWorld {
+import java.util.*;
 
-    // method main(): ALWAYS the APPLICATION entry point
+public class FILENAME {
     public static void main (String[] args) {
         System.out.println ("Hello World!");
     }

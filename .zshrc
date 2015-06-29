@@ -34,9 +34,9 @@ alias ip="curl http://ipecho.net/plain ;echo"
 alias ms="middleman server"
 alias xtime="wget http://c.xkcd.com/redirect/comic/now; open ./now; read; rm ./now;"
 alias cda="cd -"
-function lenv() 
+function ee() 
 {
-    env $(cat .env | xargs) $1
+    export $(cat .env)
 }
 # pretty print json
 # eg: echo '{"a": 1}' | ppj
@@ -126,7 +126,7 @@ alias gphm="git push heroku master"
 alias hcp="heroku config:pull"
 function mongolab()
 {
-    URI=$($DOTFILES/util/mongolab.rb)
+    URI=$($DOTFILES/util/mongolab.rb $1)
     if ! [ -z $URI ]; then
         # not sure why this is double wrapped, but it is
         $(echo "mongo $URI")

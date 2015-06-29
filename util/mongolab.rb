@@ -22,7 +22,12 @@ end
 
 f.each do |line|
     l = line.split('=') 
-    if l.first == 'MONGOLAB_URI'
+    if ARGV[0] == 'test'
+        s = 'MONGOLAB_TEST_URI'
+    else
+        s = 'MONGOLAB_URI'
+    end
+    if l.first == s 
         mongoize(l.last.gsub('"',''))
         break
     end
