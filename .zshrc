@@ -73,7 +73,7 @@ alias cig='lsof -i :4567'
 function sin()
 {
     if [ -f ./Procfile.dev ]; then
-        foreman start -f Procfile.dev
+        rerun 'foreman start -f Procfile.dev'
     else
         sinatra
     fi

@@ -22,7 +22,7 @@ end
 
 f.each do |line|
     l = line.split('=') 
-    if ARGV[0] == 'test'
+    if ['test', 'staging'].include? ARGV[0]
         s = 'MONGOLAB_TEST_URI'
     else
         s = 'MONGOLAB_URI'
