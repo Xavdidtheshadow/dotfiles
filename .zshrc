@@ -82,9 +82,9 @@ function sin()
 function sinatra()
 {
     if [ -f ./config.ru ]; then
-        rerun "rackup -p 4567" -p "**/*.{rb,js,coffee,css,scss,erb,html,haml,ru,yml,json}"
+        rerun "bundle exec rackup -p 4567" -p "**/*.{rb,js,coffee,css,scss,erb,html,haml,ru,yml,json}"
     else
-        rerun ruby "${PWD##*/}.rb" -p "**/*.{rb,js,coffee,css,scss,erb,html,haml,ru,yml,json}"
+        rerun ruby "bundle exec ${PWD##*/}.rb" -p "**/*.{rb,js,coffee,css,scss,erb,html,haml,ru,yml,json}"
     fi
 }
 
@@ -116,7 +116,10 @@ alias disc="git reset --hard"
 alias b="./build.sh"
 alias t="ruby spec/test.rb"
 # push and set upstream branch
-function gpu() { REPO=$(git rev-parse --abbrev-ref HEAD); git push --set-upstream origin $REPO }
+# this doesn't work with my config?
+function gpu() {
+    git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
+}
 
 # from http://www.reddit.com/2e513y
 function gi() { curl https://www.gitignore.io/api/$@ > .gitignore}
@@ -124,6 +127,8 @@ function gi() { curl https://www.gitignore.io/api/$@ > .gitignore}
 ##~ HEROKU ~##
 alias gphm="git push heroku master"
 alias hcp="heroku config:pull"
+alias hmo="heroku maintenance:on"
+alias hmof="heroku maintenance:off"
 function mongolab()
 {
     URI=$($DOTFILES/util/mongolab.rb $1)
@@ -187,7 +192,7 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/share/npm/lib/node_modules/coffee-script/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
+export PATH=$PATH:/usr/local/share/npm/lib/node_modules/coffee-script/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/apache-maven-3.3.3/bin
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

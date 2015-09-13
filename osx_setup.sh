@@ -48,6 +48,8 @@ ln -s $dotpath/.gemrc .
 ln -s $dotpath/.irbrc .
 ln -s $dotpath/.vimrc .
 ln -s $dotpath/.gitignore_global .
+
+ln -s $dotpath/bin/* /usr/local/bin/
 # osx stuff
 
 # install subl - use root instead of ~
