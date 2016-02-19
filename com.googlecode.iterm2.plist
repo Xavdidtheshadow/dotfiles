@@ -91,11 +91,13 @@
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
 	<key>NSWindow Frame Preferences</key>
-	<string>258 184 924 485 0 0 1440 878 </string>
+	<string>258 184 924 485 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>48 8 696 431 0 0 1440 877 </string>
+	<string>499 273 570 386 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>374 395 570 386 0 0 1440 877 </string>
+	<string>374 426 570 386 0 0 1440 900 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>225 22 570 386 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_DD4C248D-5042-4E43-8D8D-BB406CEB6EB8</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -328,7 +330,7 @@
 			<key>Disable Window Resizing</key>
 			<true/>
 			<key>Flashing Bell</key>
-			<false/>
+			<true/>
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -812,7 +814,14 @@
 			<key>Transparency</key>
 			<real>0.39797291159629822</real>
 			<key>Triggers</key>
-			<array/>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>BounceTrigger</string>
+					<key>regex</key>
+					<string>\[rerun\] \w* Launch Failed</string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -1568,6 +1577,12 @@
 			<string>/Users/David</string>
 		</dict>
 	</array>
+	<key>NoSyncNeverRemindPrefsChangesCopy</key>
+	<true/>
+	<key>NoSyncTimeOfLastPromo</key>
+	<real>456377210.81723702</real>
+	<key>NoSyncTimeOfLastPromoDownload</key>
+	<real>465626783.395904</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1618,7 +1633,7 @@
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
-	<false/>
+	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<false/>
 	<key>RightCommand</key>
@@ -1632,7 +1647,9 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-10-27T11:23:32Z</date>
+	<date>2015-10-04T05:31:42Z</date>
+	<key>SUSkippedVersion</key>
+	<string>2.1.3</string>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1668,7 +1685,7 @@
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
-	<string>.Helvetica Neue DeskInterface</string>
+	<string>.AppleSystemUIFont</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
@@ -1680,6 +1697,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.0</string>
+	<string>2.1.1</string>
 </dict>
 </plist>

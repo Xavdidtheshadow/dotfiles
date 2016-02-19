@@ -1,4 +1,7 @@
 [
     { "keys": ["super+k", "super+m"], "command": "set_mark" },
-    { "keys": ["alt+space"], "command": "auto_complete" }
+    { "keys": ["alt+space"], "command": "auto_complete" },
+    { "keys": ["super+shift+d"], "command": "goto_definition" },
+    { "keys": ["super+alt+down"], "command": "duplicate_line" },
+    { "keys": ["super+shift+n"], "command": "new_view_into_file" }
 ]

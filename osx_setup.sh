@@ -31,14 +31,15 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 # install brew
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
-# install autojump
-brew install autojump
+# install brew things
+# should make a file and xargs it
+brew install autojump qj
 
 # install bundler
 gem install bundler
 
 # better ruby version
-curl -sSL https://get.rvm.io | bash -s stable --ruby=2.1.1
+curl -sSL https://get.rvm.io | bash -s stable 
 
 # symlinks
 ln -s $dotpath/.zshrc .
@@ -66,8 +67,6 @@ ln -s $dotpath/ST3/Installed\ Packages .
 cd ~
 
 # OSX Preferences
-
-
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &

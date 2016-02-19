@@ -58,6 +58,7 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"Javascript Beautify",
 		"Vintage"
 	],
 	"open_files_in_new_window": false,

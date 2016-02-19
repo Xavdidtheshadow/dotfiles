@@ -1,4 +1,5 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
@@ -17,6 +18,8 @@
 		"GitGutter",
 		"Haml",
 		"Jade",
+		"Javascript Beautify",
+		"JavaScriptNext - ES6 Syntax",
 		"JSONLint",
 		"Less Tabs",
 		"Monokai Extended",

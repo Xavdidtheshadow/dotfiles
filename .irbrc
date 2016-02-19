@@ -14,3 +14,8 @@ def riqinit
   require 'riq'
   RIQ.init(ENV['RIQ_API_KEY'], ENV['RIQ_API_SECRET'])
 end
+
+def riqtest
+  require 'riq'
+  RIQ.init(ENV['RIQ_TEST_API_KEY'], ENV['RIQ_TEST_API_SECRET'])
+end
