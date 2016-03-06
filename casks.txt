@@ -1,0 +1,16 @@
+sublime-text3
+alfred
+flux
+keepingyouawake
+iterm2
+font-inconsolata
+keka
+dropbox
+google-drive
+google-chrome
+techstoreclub-simple-comic
+spotify
+slack
+transmission
+hazel
+ngrok

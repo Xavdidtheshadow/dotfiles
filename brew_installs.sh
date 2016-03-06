@@ -1,8 +1,12 @@
-brew tap caskroom/cask
-brew install brew-cask
+#! /bin/bash -ex
 
+brew update
 
-brew install autojump
-brew cask install github
-brew cask install alfred
-brew cask install sublime-text
+brew install autojump jq youtube-dl node
+
+brew cask update
+brew tap caskroom/fonts
+brew tap caskroom/versions
+
+brew cask install $(cat casks.txt | tr '\n' ' ')
+

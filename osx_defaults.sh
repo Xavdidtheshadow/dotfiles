@@ -1,6 +1,6 @@
-# http://mths.be/osx
+#! /bin/bash -ex
 
-# RUN THIS FROM THE DOTFILE FOLDER
+# http://mths.be/osx
 
 # brew=false
 # zsh=false
@@ -21,50 +21,6 @@
 
 # Ask for the administrator password upfront
 sudo -v
-
-# #zsh setup
-dotpath=`pwd`
-cd ~
-#insall oh_my_zsh
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-
-# install brew
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-
-# install brew things
-# should make a file and xargs it
-brew install autojump qj
-
-# install bundler
-gem install bundler
-
-# better ruby version
-curl -sSL https://get.rvm.io | bash -s stable 
-
-# symlinks
-ln -s $dotpath/.zshrc .
-ln -s $dotpath/.gitconfig .
-ln -s $dotpath/.env .
-ln -s $dotpath/.gemrc .
-ln -s $dotpath/.irbrc .
-ln -s $dotpath/.vimrc .
-ln -s $dotpath/.gitignore_global .
-
-ln -s $dotpath/bin/* /usr/local/bin/
-# osx stuff
-
-# install subl - use root instead of ~
-# ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /bin/subl
-
-# install inconsolata
-
-# sublime setup
-cd ~/Library/Application\ Support/Sublime\ Text\ 3
-rm -rf Packages
-rm -rf Insalled\ Packages
-ln -s $dotpath/ST3/Packages .
-ln -s $dotpath/ST3/Installed\ Packages .
-cd ~
 
 # OSX Preferences
 
@@ -390,23 +346,32 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
 
 ###############################################################################
+# Photos                                                                      #
+###############################################################################
+
+# Prevent Photos from opening automatically when devices are plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+###############################################################################
 # Transmission.app                                                            #
 ###############################################################################
 
 # Use `~/Documents/Torrents` to store incomplete downloads
-# defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-# defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Documents/Torrents"
+mkdir ~/Downloads/Torrents
+mkdir ~/Downloads/zinc
+defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
+defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/zinc"
 
 # Don’t prompt for confirmation before downloading
-# defaults write org.m0k.transmission DownloadAsk -bool false
+defaults write org.m0k.transmission DownloadAsk -bool false
 
 # Trash original torrent files
-# defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 
 # Hide the donate message
-# defaults write org.m0k.transmission WarningDonate -bool false
+defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
-# defaults write org.m0k.transmission WarningLegal -bool false
+defaults write org.m0k.transmission WarningLegal -bool false
 
 ###############################################################################
 # Twitter.app                                                                 #
@@ -438,9 +403,9 @@ defaults write com.twitter.twitter-mac HideInBackground -bool false
 ###############################################################################
 
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-    "Dock" "Finder" "Mail" "Messages" "Safari" "SizeUp" "SystemUIServer" \
+    "Dock" "Finder" "Mail" "Messages" "Photos" "Safari" "SizeUp" "SystemUIServer" \
     "Terminal" "Transmission" "Twitter" "iCal"; do
-    killall "${app}" > /dev/null 2>&1
+    killall "${app}" &> /dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
 
