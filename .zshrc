@@ -133,8 +133,7 @@ function mongolab()
 {
     URI=$($DOTFILES/util/mongolab.rb $1)
     if ! [ -z $URI ]; then
-        # not sure why this is double wrapped, but it is
-        $(echo "mongo $URI")
+        eval mongo $URI
     else
         echo No .env found
     fi
@@ -147,7 +146,7 @@ alias rc="rails console"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 
-plugins=(git rails ruby subl)
+plugins=(gitfast sublime brew docker gem sudo)
 
 ##~ RIQ ~##
 function work() 
