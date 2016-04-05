@@ -38,3 +38,5 @@ do
   printf "defaults write com.divisiblebyzero.Spectacle ${key} -data " >> $SPECTACLE_PREFS
   defaults read com.divisiblebyzero.Spectacle ${key} | sed 's/[^0-9a-f]//g' >> $SPECTACLE_PREFS
 done
+
+chmod +x $SPECTACLE_PREFS

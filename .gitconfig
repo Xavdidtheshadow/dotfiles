@@ -3,8 +3,8 @@
 	email = beamneocube@gmail.com
 	username = Xavdidtheshadow
 [core]
-	editor = subl -n -w
 	excludesfile = ~/.gitignore_global
+	editor = subl -n -w
 [merge]
 	tool = vimdiff
 [color]

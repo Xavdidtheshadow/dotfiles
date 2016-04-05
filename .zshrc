@@ -10,6 +10,7 @@ ZSH_THEME="kolo"
 
 ##~ PATH STUFF ~## 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 ##~ EDITORS ~##
 alias zshconfig="subl ~/.zshrc"
@@ -52,7 +53,12 @@ function port()
 # takes tag of a docker container and runs bash in said container
 function inv()
 {
-    docker run -it $1 bash
+    docker run -it --rm $1 bash
+}
+
+function run()
+{
+    docker run --rm $1
 }
 
 ##~ RUBY ~##
@@ -121,8 +127,16 @@ function gpu() {
     git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
 }
 
-# from http://www.reddit.com/2e513y
-function gi() { curl https://www.gitignore.io/api/$@ > .gitignore}
+# adapted from http://www.reddit.com/2e513y
+function gi()
+{
+    VAL=$(curl https://www.gitignore.io/api/$@)
+    if [ $1 = 'list' ];then
+        echo $VAL
+    else
+        echo $VAL > .gitignore
+    fi
+}
 
 ##~ HEROKU ~##
 alias gphm="git push heroku master"

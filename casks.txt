@@ -14,3 +14,5 @@ slack
 transmission
 hazel
 ngrok
+spectacle
+

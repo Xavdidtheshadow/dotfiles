@@ -31,6 +31,7 @@ ln -s $DOTPATH/.env .
 ln -s $DOTPATH/.gemrc .
 ln -s $DOTPATH/.irbrc .
 ln -s $DOTPATH/.vimrc .
+ln -s $DOTPATH/.jshintrc .
 ln -s $DOTPATH/.gitignore_global .
 
 ln -s $DOTPATH/bin/* /usr/local/bin/
