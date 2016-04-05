@@ -22,21 +22,13 @@ rmv use $RUBY_VERSION --default
 
 # install brew
 /usr/bin/env ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-./brew_installs.sh
+./$DOTPATH/brew_installs.sh
 
 # symlinks
-ln -s $DOTPATH/.zshrc .
-ln -s $DOTPATH/.gitconfig .
-ln -s $DOTPATH/.env .
-ln -s $DOTPATH/.gemrc .
-ln -s $DOTPATH/.irbrc .
-ln -s $DOTPATH/.vimrc .
-ln -s $DOTPATH/.jshintrc .
-ln -s $DOTPATH/.gitignore_global .
+ln -sf $DOTPATH/dots/.* .  
 
-ln -s $DOTPATH/bin/* /usr/local/bin/
-
-gem install bundler
+cd $DOTPATH
+gem install bundler 
 bundle install
 
 # install subl - use root instead of ~
