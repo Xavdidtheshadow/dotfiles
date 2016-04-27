@@ -58,7 +58,9 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"Floobits",
 		"Javascript Beautify",
+		"SublimeLinter-jshint",
 		"Vintage"
 	],
 	"open_files_in_new_window": false,
@@ -66,5 +68,6 @@
 	"soda_classic_tabs": true,
 	"theme": "Soda Dark 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"word_wrap": true
+	"word_wrap": true,
+	"ensure_newline_at_eof_on_save": true
 }
