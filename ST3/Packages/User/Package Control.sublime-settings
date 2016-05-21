@@ -6,14 +6,11 @@
 	"installed_packages":
 	[
 		"Base16 Color Schemes",
-		"Better CoffeeScript",
 		"BracketHighlighter",
 		"Color Highlighter",
 		"Dockerfile Syntax Highlighting",
 		"EasyDiff",
 		"EJS",
-		"Floobits",
-		"Foundation 5 Snippets",
 		"Git",
 		"GitGutter",
 		"Haml",
@@ -29,11 +26,9 @@
 		"Pretty JSON",
 		"Python Improved",
 		"Sass",
-		"SFTP",
 		"StandardFormat",
 		"sublime-github",
 		"SublimeLinter",
-		"SublimeLinter-coffee",
 		"SublimeLinter-contrib-standard",
 		"SublimeLinter-csslint",
 		"SublimeLinter-haml",
@@ -42,7 +37,8 @@
 		"Swift",
 		"Theme - Soda",
 		"Todo.txt Syntax",
-		"TodoReview"
+		"TodoReview",
+		"TypeScript"
 	],
 	"repositories":
 	[

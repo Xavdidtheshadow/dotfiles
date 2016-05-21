@@ -10,7 +10,7 @@
 	"auto_match_enabled": false,
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/User/Monokai Extended Bright (SL).tmTheme",
-	"ensure_newline_at_eof_on_save": false,
+	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
 		"*.pyc",
@@ -58,7 +58,6 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Floobits",
 		"Javascript Beautify",
 		"SublimeLinter-jshint",
 		"Vintage"
@@ -68,6 +67,5 @@
 	"soda_classic_tabs": true,
 	"theme": "Soda Dark 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"word_wrap": true,
-	"ensure_newline_at_eof_on_save": true
+	"word_wrap": true
 }

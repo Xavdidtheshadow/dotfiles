@@ -4,6 +4,10 @@ ZSH=$HOME/.oh-my-zsh
 source ~/.env
 source ~/.loc
 
+# no wierd !45 expansion
+# use single quotes on command line instead
+# setopt no_bang_hist
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="kolo"
@@ -167,17 +171,7 @@ plugins=(gitfast sublime brew docker gem sudo)
 ##~ RIQ ~##
 function work() 
 {   
-    export JAVA_HOME="$(/usr/libexec/java_home)"
-    export PROJECTS_ROOT=$HOME/projects
-    export RIQ=$PROJECTS_ROOT/riq
-    export DEVENV=$PROJECTS_ROOT/devenv 
-    export PATH=$PATH:$DEVENV/bin
-    source $DEVENV/bin/dev_bash_profile.sh
-
-    export DROPBOX=/Users/dbrownman/Dropbox
-    export DOTFILES=$DROPBOX/Saves/dotfiles
-    function clo() { git clone git@github.com:relateiq/$1.git }
-    alias devmongo='mongo $(docker-machine ip dev)'
+    
 }
 
 ##~ BLACK PEARL ~##
