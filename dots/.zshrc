@@ -190,7 +190,7 @@ function home()
     ## CUSTOM GIT ##
     alias nr=". $DOTFILES/util/new_repo.sh" 
     alias prune=". $DOTFILES/util/prune_branches.sh $1"
-    function clo() { git clone git@github.com:xavdidtheshadow/$1.git }
+    function clo() { git clone git@github.com:xavdid/$1.git }
 }
 
 if [[ $LOC = RIQ ]]; then
