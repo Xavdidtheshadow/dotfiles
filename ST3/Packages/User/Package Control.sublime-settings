@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"Base16 Color Schemes",
+		"Better CoffeeScript",
 		"BracketHighlighter",
 		"Color Highlighter",
 		"Dockerfile Syntax Highlighting",
@@ -24,6 +25,7 @@
 		"Package Control",
 		"PackageResourceViewer",
 		"Pretty JSON",
+		"Pug",
 		"Python Improved",
 		"Sass",
 		"StandardFormat",

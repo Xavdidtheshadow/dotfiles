@@ -39,4 +39,4 @@ Thumbs.db
 # Other #
 #########
 .env
-*.sublime-*
+*.sublime-workspace

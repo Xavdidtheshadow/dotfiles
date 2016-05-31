@@ -128,7 +128,14 @@ alias t="ruby spec/test.rb"
 # push and set upstream branch
 # this doesn't work with my config?
 function gpu() {
-    git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
+    REPO=$(git rev-parse --abbrev-ref HEAD)
+    git push --set-upstream origin $REPO
+}
+
+# update remote to match new username
+function rem() {
+    [[ $(git remote get-url origin) =~ '\/(.*)\.git$' ]] && 
+    git remote set-url origin "git@github.com:xavdid/$match[1].git"
 }
 
 # adapted from http://www.reddit.com/2e513y

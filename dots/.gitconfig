@@ -1,7 +1,7 @@
 [user]
 	name = David Brownman
 	email = beamneocube@gmail.com
-	username = Xavdidtheshadow
+	username = xavdid
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = subl -n -w
