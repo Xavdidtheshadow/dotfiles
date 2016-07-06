@@ -17,7 +17,7 @@
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
-	<true/>
+	<false/>
 	<key>ClosingHotkeySwitchesSpaces</key>
 	<false/>
 	<key>CommandSelection</key>
@@ -83,19 +83,40 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Dropbox/Saves/dotfiles</string>
+	<string>~/Documents</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{712, 488}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
+	<key>NSScrollViewShouldScrollUnderTitlebar</key>
+	<false/>
+	<key>NSTableView Columns KeyBingingTable</key>
+	<array>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErATCG
+		</data>
+		<string>198</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErATGG
+		</data>
+		<string>322</string>
+	</array>
+	<key>NSTableView Hidden Columns KeyBingingTable</key>
+	<array/>
+	<key>NSTableView Sort Ordering KeyBingingTable</key>
+	<array/>
 	<key>NSWindow Frame Preferences</key>
-	<string>258 184 924 485 0 0 1440 900 </string>
+	<string>258 213 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>499 273 570 386 0 0 1440 877 </string>
+	<string>48 480 570 387 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>374 426 570 386 0 0 1440 900 </string>
+	<string>374 402 650 410 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>225 22 570 386 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_DD4C248D-5042-4E43-8D8D-BB406CEB6EB8</key>
@@ -1577,12 +1598,28 @@
 			<string>/Users/David</string>
 		</dict>
 	</array>
+	<key>NoSyncConfirmBeta</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
+	<integer>0</integer>
+	<key>NoSyncHaveShownPromoWithId_4</key>
+	<true/>
+	<key>NoSyncInstallationId</key>
+	<string>EF40CA82-6B03-4B0E-94AB-B7CD77A23E05</string>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
+	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
+	<real>488243255.34057802</real>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>456377210.81723702</real>
+	<real>477906283.43251401</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>465626783.395904</real>
+	<real>487752585.32131499</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1642,14 +1679,14 @@
 	<integer>3</integer>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
+	<key>SUFeedAlternateAppNameKey</key>
+	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>http://iterm2.com/appcasts/testing.xml</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=78</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-10-04T05:31:42Z</date>
-	<key>SUSkippedVersion</key>
-	<string>2.1.3</string>
+	<date>2016-07-03T06:50:42Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1697,6 +1734,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.1.1</string>
+	<string>3.0.2</string>
 </dict>
 </plist>

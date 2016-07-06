@@ -12,7 +12,7 @@ source ~/.loc
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="kolo"
 
-##~ PATH STUFF ~## 
+##~ PATH STUFF ~##
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
@@ -27,9 +27,11 @@ alias mate="subl"
 alias zhide="defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder"
 alias zshow="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder"
 
-##~ RIQ WORK ~##
-
 ##~ TERMINAL ~##
+# alias hub as git
+# this outputs "alias git=hub"
+eval "$(hub alias -s)"
+
 # alias caen="ssh brownman@login.engin.umich.edu"
 alias sz="source ~/.zshrc"
 alias http="python -m SimpleHTTPServer 1234"
@@ -39,7 +41,7 @@ alias ip="curl http://ipecho.net/plain ;echo"
 alias ms="middleman server"
 alias xtime="wget http://c.xkcd.com/redirect/comic/now; open ./now; read; rm ./now;"
 alias cda="cd -"
-function ee() 
+function ee()
 {
     export $(cat .env)
 }
@@ -48,6 +50,11 @@ function ee()
 alias ppj="python -m json.tool"
 alias viet="sudo vi /etc/hosts"
 alias pir="pip install -r requirements.txt"
+function sha256()
+{
+    # should edit this to also only output the sha or just sha and filename
+    shasum -a 256 $1
+}
 
 function port()
 {
@@ -108,6 +115,11 @@ function nod()
     fi
 }
 
+function renpm()
+{
+    rm -rf node_modules && npm i
+}
+
 ##~ GIT ~##
 alias g="git"
 alias purr="git pull --rebase"
@@ -124,7 +136,17 @@ alias pushit="open -g spotify:track:0GugYsbXWlfLOgsmtsdxzg; git push"
 
 alias disc="git reset --hard"
 alias b="./build.sh"
-alias t="ruby spec/test.rb"
+# alias t="ruby spec/test.rb"
+function t() {
+    if [ -f spec/test.rb ];then
+        ruby spec/test.rb
+    elif [ -f package.json ];then
+        npm test
+    else
+        echo "Can't guess testing method, do it yourself"
+    fi
+}
+
 # push and set upstream branch
 # this doesn't work with my config?
 function gpu() {
@@ -134,7 +156,7 @@ function gpu() {
 
 # update remote to match new username
 function rem() {
-    [[ $(git remote get-url origin) =~ '\/(.*)\.git$' ]] && 
+    [[ $(git remote get-url origin) =~ '\/(.*)\.git$' ]] &&
     git remote set-url origin "git@github.com:xavdid/$match[1].git"
 }
 
@@ -176,9 +198,9 @@ alias rc="rails console"
 plugins=(gitfast sublime brew docker gem sudo)
 
 ##~ RIQ ~##
-function work() 
-{   
-    
+function work()
+{
+
 }
 
 ##~ BLACK PEARL ~##
@@ -195,7 +217,7 @@ function home()
     alias db="cd $DROPBOX"
 
     ## CUSTOM GIT ##
-    alias nr=". $DOTFILES/util/new_repo.sh" 
+    alias nr=". $DOTFILES/util/new_repo.sh"
     alias prune=". $DOTFILES/util/prune_branches.sh $1"
     function clo() { git clone git@github.com:xavdid/$1.git }
 }
@@ -215,4 +237,4 @@ export PATH=$PATH:/usr/local/share/npm/lib/node_modules/coffee-script/bin:/usr/l
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin" 
+export PATH="$PATH:$HOME/.rvm/bin"
