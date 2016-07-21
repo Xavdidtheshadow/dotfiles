@@ -4,9 +4,9 @@ Dotfile collection! Including new computer setup, various rc files, and saved Su
 
 ## New Computer Setup
 
-From this folder, run (`./file.sh`) these files: 
+From this folder, run (`./$FILE.sh`) these files:
 
-1. `cli_installs` (runs `brew_installs_`)
+1. `cli_installs` (runs `brew_installs`)
 2. `osx_defaults`
 
-DISCLAIMER: Since updating these, I havne't run everything all at once, but last time I was setting stuff up, everyhing worked nicely and a lot of things haven't changed too much. It's probably fine. 
+DISCLAIMER: Since updating these, I haven't run everything all at once, but last time I was setting stuff up, everything worked nicely and a lot of things haven't changed too much. It's probably fine.

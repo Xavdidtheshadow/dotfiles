@@ -3,5 +3,6 @@
     { "keys": ["alt+space"], "command": "auto_complete" },
     { "keys": ["super+shift+d"], "command": "goto_definition" },
     { "keys": ["super+alt+down"], "command": "duplicate_line" },
-    { "keys": ["super+shift+n"], "command": "new_view_into_file" }
+    { "keys": ["super+shift+n"], "command": "new_view_into_file" },
+    { "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser"} }
 ]
