@@ -35,7 +35,8 @@ gem install bundler
 bundle install
 
 # install subl - use root instead of ~
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /bin/subl
+# don't actually need this, the zsh sublime plugin handles it
+# ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
 # sublime setup
 cd ~/Library/Application\ Support/Sublime\ Text\ 3
