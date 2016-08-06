@@ -1,6 +1,10 @@
 {
-    "rulers":
-    [
-        80
-    ]
+	"extensions":
+	[
+		"txt"
+	],
+	"rulers":
+	[
+		80
+	]
 }

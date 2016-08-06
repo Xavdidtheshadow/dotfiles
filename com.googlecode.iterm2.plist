@@ -83,7 +83,9 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents</string>
+	<string>/Applications</string>
+	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{712, 459}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 488}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -117,11 +119,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>258 242 606 456 0 0 1440 877 </string>
+	<string>258 271 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>434 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>48 480 570 387 0 0 1440 877 </string>
+	<string>48 310 570 387 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>374 402 650 410 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1676,6 +1678,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/david/Dropbox/Saves/dotfiles</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1695,7 +1699,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-07-12T05:16:54Z</date>
+	<date>2016-07-26T23:20:58Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1743,6 +1747,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.2</string>
+	<string>3.0.4</string>
 </dict>
 </plist>

@@ -62,6 +62,7 @@ cask 'hazel'
 cask 'ngrok'
 cask 'spectacle'
 cask 'postman'
+cask 'adapter'
 
 mas 'DeskConnect', id: 642220194
 mas 'Markoff', id: 1084713122
