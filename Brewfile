@@ -36,8 +36,8 @@ brew 'python3'
 brew 'redis'
 brew 'shellcheck'
 brew 'tvnamer'
+brew 'wifi-password'
 brew 'youtube-dl'
-brew 'vitorgalvao/tiny-scripts/cask-repair'
 
 brew 'zsh'
 brew 'zsh-completions'
@@ -65,7 +65,7 @@ cask 'postman'
 cask 'adapter'
 
 mas 'DeskConnect', id: 642220194
-mas 'Markoff', id: 1084713122
+# mas 'Markoff', id: 1084713122
 # mas 'GarageBand', id: 682658836
 # mas 'iMovie', id: 408981434
 mas 'Xcode', id: 497799835
