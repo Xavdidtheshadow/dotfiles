@@ -17,7 +17,10 @@
 		"blog",
 		"json",
 		"App",
-		"gametime"
+		"gametime",
+		"epub",
+		"Zapier",
+		"leapt"
 	],
 	"auto_complete": false,
 	"auto_match_enabled": false,
@@ -82,6 +85,6 @@
 	"theme": "Soda Dark 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": true,
-	"typescript_tsdk": "/usr/local/lib/node_modules/typescript/lib"
+	"typescript_tsdk": "/usr/local/lib/node_modules/typescript/lib",
+	"word_wrap": true
 }
