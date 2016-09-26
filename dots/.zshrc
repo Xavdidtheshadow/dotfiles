@@ -1,7 +1,10 @@
+#! /bin/zsh
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-
+# shellcheck source=/dev/null
 source ~/.env
+# shellcheck source=/dev/null
 source ~/.loc
 
 # no wierd !45 expansion
@@ -10,22 +13,21 @@ source ~/.loc
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="kolo"
+export ZSH_THEME="kolo"
 
 ##~ PATH STUFF ~##
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+# shellcheck source=/dev/null
+[[ -s "$(brew --prefix)"/etc/autojump.sh ]] && . "$(brew --prefix)"/etc/autojump.sh
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 ##~ EDITORS ~##
 alias zshconfig="subl ~/.zshrc"
 alias gitconfig="subl ~/.gitconfig"
 alias envedit="subl ~/.env"
-# Screw Textmate
-alias mate="subl"
 
 ##~ OSX ~##
-alias zhide="defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder"
-alias zshow="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder"
+alias zhide="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
+alias zshow="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
 
 ##~ TERMINAL ~##
 # alias hub as git
@@ -38,9 +40,10 @@ alias http="python -m SimpleHTTPServer 1234"
 alias watch="sass --watch ."
 alias mip="ifconfig |grep inet"
 alias ip="curl http://ipecho.net/plain ;echo"
-alias ms="middleman server"
+alias ms="bundle exec middleman server"
 alias xtime="wget http://c.xkcd.com/redirect/comic/now; open ./now; read; rm ./now;"
 alias cda="cd -"
+alias wj="warriorjs"
 function ee()
 {
     export $(cat .env)
@@ -53,7 +56,7 @@ alias pir="pip install -r requirements.txt"
 function sha256()
 {
     # should edit this to also only output the sha or just sha and filename
-    shasum -a 256 $1
+    shasum -a 256 "$1"
 }
 
 function port()
@@ -62,25 +65,27 @@ function port()
 }
 
 # takes tag of a docker container and runs bash in said container
+# investigate a container
 function inv()
 {
-    docker run -it --rm $1 bash
+    docker run -it --rm "$1" bash
 }
 
 function run()
 {
-    docker run --rm $1
+    docker run --rm "$1"
 }
 
 ##~ RUBY ~##
 function gemdeploy()
 {
-    rm *.gem
-    gem build $(echo *.gemspec)
-    read "push?Do you want to push to RubyGems? "
+    rm ./*.gem
+    gem build "$(echo ./*.gemspec)"
+    read -r "push?Do you want to push to RubyGems? "
+    # shellcheck disable=SC2154
     if [[ "$push" =~ ^[Yy]$ ]]
     then
-        gem push $(echo *.gem)
+        gem push "$(echo ./*.gem)"
     fi
 }
 
@@ -120,14 +125,17 @@ function renpm()
     rm -rf node_modules && npm i
 }
 
+alias jsnew="npm init -y && tsc --init && touch \$(cat package.json|jq -r '.main')"
+
 ##~ GIT ~##
 alias g="git"
 alias purr="git pull --rebase"
 alias gs="git status"
+alias gpt="git push && git push --tags"
 
 alias gq="git commit -m"
-function ggg() { git add --all .; git commit -m "$1" }
-function ggu() { git add -u .; git commit -m "$1" }
+function ggg() { git add --all .; git commit -m "$1"; }
+function ggu() { git add -u .; git commit -m "$1"; }
 alias ch="git checkout"
 # nb instructions: `nb $BRANCH`
 alias nb="git push -u origin"
@@ -135,12 +143,25 @@ alias nb="git push -u origin"
 alias pushit="open -g spotify:track:0GugYsbXWlfLOgsmtsdxzg; git push"
 
 alias disc="git reset --hard"
-alias b="./build.sh"
+# alias b="./build.sh"
+function b() {
+    if [ -f build.sh ];then
+        ./build.sh "$@"
+    elif [ -f build ];then
+        ./build "$@"
+    elif [ -f package.json ] && [ "$(< package.json|jq '.scripts.build')" != "null" ];then
+        npm run build
+    else
+        echo "Can't guess build method, do it yourself"
+    fi
+}
+
 # alias t="ruby spec/test.rb"
 function t() {
     if [ -f spec/test.rb ];then
         ruby spec/test.rb
     elif [ -f package.json ];then
+        # could check if test key is defined, but since npm supplies it by default, it's fine
         npm test
     else
         echo "Can't guess testing method, do it yourself"
@@ -151,23 +172,24 @@ function t() {
 # this doesn't work with my config?
 function gpu() {
     REPO=$(git rev-parse --abbrev-ref HEAD)
-    git push --set-upstream origin $REPO
+    git push --set-upstream origin "$REPO"
 }
 
 # update remote to match new username
 function rem() {
-    [[ $(git remote get-url origin) =~ '\/(.*)\.git$' ]] &&
+    [[ $(git remote get-url origin) =~ /(.*)\.git$ ]] &&
+    # this breaks if we pay attention to shellcheck
     git remote set-url origin "git@github.com:xavdid/$match[1].git"
 }
 
 # adapted from http://www.reddit.com/2e513y
 function gi()
 {
-    VAL=$(curl https://www.gitignore.io/api/$@)
-    if [ $1 = 'list' ];then
-        echo $VAL
+    VAL=$(curl https://www.gitignore.io/api/"$*")
+    if [ "$1" = 'list' ];then
+        echo "$VAL"
     else
-        echo $VAL > .gitignore
+        echo "$VAL" > .gitignore
     fi
 }
 
@@ -180,11 +202,11 @@ alias hl="heroku plugins:link ."
 
 function mongolab()
 {
-    URI=$($DOTFILES/util/mongolab.rb $1)
-    if ! [ -z $URI ]; then
-        eval mongo $URI
+    URI=$("$DOTFILES"/util/mongolab.rb "$1")
+    if ! [ -z "$URI" ]; then
+        eval mongo "$URI"
     else
-        echo No .env found
+        echo 'No .env found'
     fi
 }
 
@@ -195,12 +217,13 @@ alias rc="rails console"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 
-plugins=(gitfast sublime brew docker gem sudo)
+# shellcheck disable=SC2034
+plugins=(gitfast sublime brew docker gem sudo zsh-better-npm-completion)
 
 ##~ RIQ ~##
 function work()
 {
-
+    true
 }
 
 ##~ BLACK PEARL ~##
@@ -214,12 +237,10 @@ function home()
     export DOCKER_CERT_PATH=/Users/david/.boot2docker/certs/boot2docker-vm
     export DOCKER_TLS_VERIFY=1
 
-    alias db="cd $DROPBOX"
+    alias db="cd \$DROPBOX"
 
     ## CUSTOM GIT ##
-    alias nr=". $DOTFILES/util/new_repo.sh"
-    alias prune=". $DOTFILES/util/prune_branches.sh $1"
-    function clo() { git clone git@github.com:xavdid/$1.git }
+    function clo() { git clone git@github.com:xavdid/"$1".git; }
 }
 
 if [[ $LOC = RIQ ]]; then
@@ -228,7 +249,7 @@ elif [[ $LOC = TBP ]]; then
     home
 fi
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH"/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/share/npm/lib/node_modules/coffee-script/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
@@ -237,4 +258,8 @@ export PATH=$PATH:/usr/local/share/npm/lib/node_modules/coffee-script/bin:/usr/l
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export NVM_DIR="/Users/david/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
