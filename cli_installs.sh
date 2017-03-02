@@ -30,6 +30,10 @@ fi
 # symlinks
 ln -sf "$DOTPATH"/dots/.* .
 
+# sync emu
+cd "/Users/david/Library/Application Support"
+ln -s "$DROPBOX"/Saves/OpenEmu .
+
 cd "$DOTPATH"
 gem install bundler
 bundle install

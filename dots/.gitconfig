@@ -26,20 +26,6 @@
 	old = red
 	new = green
 
-[alias]
-
-	# Aliases
-	unadd = reset HEAD
-	tree = log --graph --oneline --decorate
-	all = commit -A
-	standup = log ––since yesterday ––author David
-
-	# Shorthands
-	l = log --graph --oneline --decorate  # alias of tree above
-
-	# typos
-	psuh = push
-	
 [credential]
 	helper = osxkeychain
 [push]

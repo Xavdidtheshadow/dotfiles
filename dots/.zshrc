@@ -21,13 +21,22 @@ export ZSH_THEME="kolo"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 ##~ EDITORS ~##
-alias zshconfig="subl ~/.zshrc"
-alias gitconfig="subl ~/.gitconfig"
-alias envedit="subl ~/.env"
+export EDITOR=code
+alias zshconfig="$EDITOR ~/.zshrc"
+alias gitconfig="$EDITOR ~/.gitconfig"
+alias envedit="$EDITOR ~/.env"
+
+function sbl() {
+    DIR=${PWD##*/}
+    if [ -f "$DIR.sublime-project" ];then
+        subl "$DIR.sublime-project"
+    else
+        subl .
+    fi
+}
 
 ##~ OSX ~##
-alias zhide="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
-alias zshow="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
+# use command + shift + '.' to hide/show hidden files
 
 ##~ TERMINAL ~##
 # alias hub as git
@@ -37,13 +46,16 @@ eval "$(hub alias -s)"
 # alias caen="ssh brownman@login.engin.umich.edu"
 alias sz="source ~/.zshrc"
 alias http="python -m SimpleHTTPServer 1234"
+alias py="ptpython"
 alias watch="sass --watch ."
 alias mip="ifconfig |grep inet"
 alias ip="curl http://ipecho.net/plain ;echo"
 alias ms="bundle exec middleman server"
+alias fact="open https://en.wikipedia.org/wiki/$(date +%B_%m)"
 alias xtime="wget http://c.xkcd.com/redirect/comic/now; open ./now; read; rm ./now;"
 alias cda="cd -"
 alias wj="warriorjs"
+alias sf="standard --fix"
 function ee()
 {
     export $(cat .env)
@@ -58,7 +70,6 @@ function sha256()
     # should edit this to also only output the sha or just sha and filename
     shasum -a 256 "$1"
 }
-
 function port()
 {
     lsof -i ":$1"
@@ -75,6 +86,15 @@ function run()
 {
     docker run --rm "$1"
 }
+alias brewedit="$EDITOR $DOTFILES/Brewfile"
+
+##~ DOCKER COMPOSE ~##
+alias dc="docker-compose"
+alias dcud="docker-compose up -d"
+alias dcl="dc logs -f --tail=\"500\" web worker"
+alias docker-clean="docker ps -a -q -f status=exited | xargs docker rm && docker images -q --filter \"dangling=true\" | xargs docker rmi"
+# fix docker drift!
+alias drift="docker run --rm --privileged alpine hwclock -s"
 
 ##~ RUBY ~##
 function gemdeploy()
@@ -110,6 +130,10 @@ function sinatra()
     fi
 }
 
+##~ PYTHON ~##
+export WORKON_HOME=~/.virtualenv
+source /usr/local/bin/virtualenvwrapper.sh
+
 ##~ NODE ~##
 function nod()
 {
@@ -131,11 +155,12 @@ alias jsnew="npm init -y && tsc --init && touch \$(cat package.json|jq -r '.main
 alias g="git"
 alias purr="git pull --rebase"
 alias gs="git status"
+alias gt="git log --graph --oneline --decorate"
 alias gpt="git push && git push --tags"
 
 alias gq="git commit -m"
 function ggg() { git add --all .; git commit -m "$1"; }
-function ggu() { git add -u .; git commit -m "$1"; }
+function gug() { git add -u .; git commit -m "$1"; }
 alias ch="git checkout"
 # nb instructions: `nb $BRANCH`
 alias nb="git push -u origin"
@@ -143,7 +168,7 @@ alias nb="git push -u origin"
 alias pushit="open -g spotify:track:0GugYsbXWlfLOgsmtsdxzg; git push"
 
 alias disc="git reset --hard"
-# alias b="./build.sh"
+
 function b() {
     if [ -f build.sh ];then
         ./build.sh "$@"
@@ -160,6 +185,8 @@ function b() {
 function t() {
     if [ -f spec/test.rb ];then
         ruby spec/test.rb
+    elif [[ ${PWD##*/} =~ 'zapier' ]];then
+        zapier test --very-quiet
     elif [ -f package.json ];then
         # could check if test key is defined, but since npm supplies it by default, it's fine
         npm test
@@ -170,9 +197,15 @@ function t() {
 
 # push and set upstream branch
 # this doesn't work with my config?
-function gpu() {
-    REPO=$(git rev-parse --abbrev-ref HEAD)
-    git push --set-upstream origin "$REPO"
+# function gpu() {
+#     BRANCH=$(git rev-parse --abbrev-ref HEAD)
+#     echo $BRANCH
+#     git push -u origin "$BRANCH"
+# }
+
+function chb() {
+    git checkout -b "$1"
+    git push -u origin "$1"
 }
 
 # update remote to match new username
@@ -218,12 +251,28 @@ alias rc="rails console"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 
 # shellcheck disable=SC2034
-plugins=(gitfast sublime brew docker gem sudo zsh-better-npm-completion)
+# zsh-better-npm-completion
+plugins=(gitfast sublime brew docker gem sudo)
 
 ##~ RIQ ~##
 function work()
 {
     true
+}
+
+##~ ZAPIER ~##
+function fupdate() {
+    DTE=$(date +%-Y-%m-%d)
+    FNAME="/Users/david/Dropbox/Apps/Editorial/Zapier/$DTE.md"
+    echo "## This Week\n\n* \n\n## Next Week\n\n* \n\n## Offline\n\n* \ntldr()" > $FNAME
+    $EDITOR $FNAME
+}
+
+function finn() {
+    # DTE=$(date +%-Y-%m-%d)
+    FPATH="/Users/david/Dropbox/Apps/Editorial/Zapier"
+    mv -v "$FPATH/$DTE.md" "$FPATH/friday/$DTE.md"
+    echo "Done! Slack message soon"
 }
 
 ##~ BLACK PEARL ~##
@@ -233,9 +282,9 @@ function home()
     export DOTFILES=$DROPBOX/Saves/dotfiles
     export PROJECTS_ROOT=$HOME/projects
 
-    export DOCKER_HOST=tcp://192.168.59.103:2376
-    export DOCKER_CERT_PATH=/Users/david/.boot2docker/certs/boot2docker-vm
-    export DOCKER_TLS_VERIFY=1
+    function mag() {
+        pbpaste > "$DROPBOX/To Plex/thing-$(date -u +"%Ss").magnet"
+    }
 
     alias db="cd \$DROPBOX"
 
@@ -252,7 +301,7 @@ fi
 source "$ZSH"/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/share/npm/lib/node_modules/coffee-script/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -261,5 +310,29 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+export GOPATH=~/go
+export PATH="$PATH:$GOPATH/bin"
+
 export NVM_DIR="/Users/david/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+echo $(nvm version default) > ~/.nvm_default
+# see: https://github.com/creationix/nvm/issues/110#issuecomment-190125863
+autoload -U add-zsh-hook
+load-nvmrc() {
+    if [[ -f .nvmrc && -r .nvmrc ]]; then
+        if [[ $(nvm current) != $(cat .nvmrc) ]];then
+            nvm use
+        fi
+    elif [[ $(nvm current) != $(cat ~/.nvm_default) ]]; then
+        # need to update when I update nvm default version
+        nvm use default
+    fi
+}
+add-zsh-hook chpwd load-nvmrc
+
+# add custom completion scripts
+fpath=(~/.zsh/completion $fpath)
+
+# compsys initialization
+autoload -U compinit
+compinit
