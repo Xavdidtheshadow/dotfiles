@@ -4,7 +4,6 @@
 	username = xavdid
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = subl -n -w
 [merge]
 	tool = vimdiff
 [color]

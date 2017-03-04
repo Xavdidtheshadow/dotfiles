@@ -264,14 +264,14 @@ function work()
 function fupdate() {
     DTE=$(date +%-Y-%m-%d)
     FNAME="/Users/david/Dropbox/Apps/Editorial/Zapier/$DTE.md"
-    echo "## This Week\n\n* \n\n## Next Week\n\n* \n\n## Offline\n\n* \ntldr()" > $FNAME
+    echo "## This Week\n\n* \n\n## Next Week\n\n* \n\n## Offline\n\n* \n\ntldr()" > $FNAME
     $EDITOR $FNAME
 }
 
 function finn() {
-    # DTE=$(date +%-Y-%m-%d)
-    FPATH="/Users/david/Dropbox/Apps/Editorial/Zapier"
-    mv -v "$FPATH/$DTE.md" "$FPATH/friday/$DTE.md"
+    # DTE is still set from before
+    UPDATE_PATH="/Users/david/Dropbox/Apps/Editorial/Zapier"
+    mv "$UPDATE_PATH/$DTE.md" "$UPDATE_PATH/friday/$DTE.md"
     echo "Done! Slack message soon"
 }
 
