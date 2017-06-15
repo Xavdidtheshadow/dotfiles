@@ -2,7 +2,7 @@
 cask_args appdir: '/Applications'
 
 # taps, expanding functionality
-tap 'caskroom/cask'
+# tap 'caskroom/cask' # don't think I need this
 tap 'caskroom/versions'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
@@ -34,6 +34,7 @@ brew 'node'
 # brew 'python3'
 
 # casks
+cask '1password'
 cask 'a-better-finder-rename'
 cask 'adapter'
 cask 'alfred'
@@ -62,11 +63,7 @@ cask 'transmission'
 cask 'visual-studio-code'
 
 mas 'Airmail 3', id: 918858936
-mas 'DeskConnect', id: 642220194
-# mas 'GarageBand', id: 682658836
-# mas 'iMovie', id: 408981434
-# mas 'Markoff', id: 1084713122
-# mas 'Pages', id: 409201541
+mas '2Do', id: 477670270
 mas 'Pocket', id: 568494494
 mas 'Tweetbot', id: 557168941
 mas 'Wunderlist', id: 410628904

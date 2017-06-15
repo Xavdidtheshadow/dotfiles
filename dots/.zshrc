@@ -50,7 +50,6 @@ alias py="ptpython"
 alias watch="sass --watch ."
 alias mip="ifconfig |grep inet"
 alias ip="curl http://ipecho.net/plain ;echo"
-alias ms="bundle exec middleman server"
 alias fact="open https://en.wikipedia.org/wiki/$(date +%B_%m)"
 alias xtime="wget http://c.xkcd.com/redirect/comic/now; open ./now; read; rm ./now;"
 alias cda="cd -"
@@ -155,8 +154,13 @@ alias jsnew="npm init -y && tsc --init && touch \$(cat package.json|jq -r '.main
 alias g="git"
 alias purr="git pull --rebase"
 alias gs="git status"
+alias gp="git push"
+alias gd="git diff"
 alias gt="git log --graph --oneline --decorate"
 alias gpt="git push && git push --tags"
+alias gb="git branch"
+alias gm="git merge"
+alias gc="git commit"
 
 alias gq="git commit -m"
 function ggg() { git add --all .; git commit -m "$1"; }
@@ -184,12 +188,13 @@ function b() {
 # alias t="ruby spec/test.rb"
 function t() {
     if [ -f spec/test.rb ];then
-        ruby spec/test.rb
-    elif [[ ${PWD##*/} =~ 'zapier' ]];then
-        zapier test --very-quiet
+        ruby spec/test.rb "$@"
+    elif [[ -f package.json && $(jq '.name' package.json) =~ 'zapier' && ! $(jq '.name' package.json) =~ 'platform' ]];then
+        # nice wrapper for npm test
+        nvm exec v4.3.2 zapier test
     elif [ -f package.json ];then
         # could check if test key is defined, but since npm supplies it by default, it's fine
-        npm test
+        npm test "$@"
     else
         echo "Can't guess testing method, do it yourself"
     fi
@@ -209,11 +214,11 @@ function chb() {
 }
 
 # update remote to match new username
-function rem() {
-    [[ $(git remote get-url origin) =~ /(.*)\.git$ ]] &&
-    # this breaks if we pay attention to shellcheck
-    git remote set-url origin "git@github.com:xavdid/$match[1].git"
-}
+# function rem() {
+#     [[ $(git remote get-url origin) =~ /(.*)\.git$ ]] &&
+#     # this breaks if we pay attention to shellcheck
+#     git remote set-url origin "git@github.com:xavdid/$match[1].git"
+# }
 
 # adapted from http://www.reddit.com/2e513y
 function gi()
@@ -225,6 +230,8 @@ function gi()
         echo "$VAL" > .gitignore
     fi
 }
+
+alias pbclear="echo '' | pbcopy"
 
 ##~ HEROKU ~##
 alias gphm="git push heroku master"
@@ -252,7 +259,7 @@ alias rc="rails console"
 
 # shellcheck disable=SC2034
 # zsh-better-npm-completion
-plugins=(gitfast sublime brew docker gem sudo)
+# plugins=(gitfast sudo)
 
 ##~ RIQ ~##
 function work()
@@ -265,7 +272,7 @@ function fupdate() {
     DTE=$(date +%-Y-%m-%d)
     FNAME="/Users/david/Dropbox/Apps/Editorial/Zapier/$DTE.md"
     echo "## This Week\n\n* \n\n## Next Week\n\n* \n\n## Offline\n\n* \n\ntldr()" > $FNAME
-    $EDITOR $FNAME
+    open $FNAME
 }
 
 function finn() {
@@ -301,7 +308,7 @@ fi
 source "$ZSH"/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:$DOTFILES/bin
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -310,12 +317,12 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-export GOPATH=~/go
-export PATH="$PATH:$GOPATH/bin"
+# export GOPATH=~/go
+# export PATH="$PATH:$GOPATH/bin"
 
 export NVM_DIR="/Users/david/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-echo $(nvm version default) > ~/.nvm_default
+# echo $(nvm version default) > ~/.nvm_default
 # see: https://github.com/creationix/nvm/issues/110#issuecomment-190125863
 autoload -U add-zsh-hook
 load-nvmrc() {
